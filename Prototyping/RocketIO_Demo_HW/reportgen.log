@@ -1,0 +1,26 @@
+Release 10.1.03 reportgen K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+co2041-13.ece.iastate.edu::  Fri Mar 27 16:47:42 2009
+
+/remote/Xilinx/ISE/bin/lin/unwrapped/reportgen -intstyle ise -clock_regions -o
+RocketIO_Demo RocketIO_Demo.ncd 
+
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment
+/remote/Xilinx/ISE.
+   "RocketIO_Demo" is an NCD, version 3.2, device xc5vfx70t, package ff1136,
+speed -1
+ReportGen:LoadDesign: 'RocketIO_Demo.ncd'
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000
+Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+Device speed data version:  "PRODUCTION 1.62 2008-08-19".
+
+Generating Clock Region Report: RocketIO_Demo.clk_rgn
+
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+reportgen done!

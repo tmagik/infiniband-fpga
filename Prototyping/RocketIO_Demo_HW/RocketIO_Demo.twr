@@ -1,0 +1,444 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+/remote/Xilinx/ISE/bin/lin/unwrapped/trce -ise
+/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_HW.ise -intstyle
+ise -v 3 -s 1 -xml RocketIO_Demo RocketIO_Demo.ncd -o RocketIO_Demo.twr
+RocketIO_Demo.pcf -ucf RocketIO_Demo.ucf
+
+Design file:              RocketIO_Demo.ncd
+Physical constraint file: RocketIO_Demo.pcf
+Device,package,speed:     xc5vfx70t,ff1136,-1 (PRODUCTION 1.62 2008-08-19, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3377 - Intersecting Constraints found and resolved.  For more 
+   information see the TSI report.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_GTX_REFCLK_P = PERIOD TIMEGRP "GTX_REFCLK_P" 16 ns HIGH 
+50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_GTX_REFCLK_N = PERIOD TIMEGRP "GTX_REFCLK_N" 16 ns HIGH 
+50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_tile0_refclkout_i = PERIOD TIMEGRP 
+"gtx_i/tile0_refclkout_i" 16 ns         HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout0_i = PERIOD TIMEGRP         
+"gtx_i_refclkout_pll0_i_clkout0_i" TS_gtx_i_tile0_refclkout_i HIGH         50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout1_i = PERIOD TIMEGRP         
+"gtx_i_refclkout_pll0_i_clkout1_i" TS_gtx_i_tile0_refclkout_i / 2 HIGH         
+50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout0_i_0 = PERIOD TIMEGRP       
+  "gtx_i_refclkout_pll0_i_clkout0_i_0" TS_gtx_i_tile0_refclkout_i HIGH         
+50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout1_i_0 = PERIOD TIMEGRP       
+  "gtx_i_refclkout_pll0_i_clkout1_i_0" TS_gtx_i_tile0_refclkout_i / 2         
+HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout0_i_1 = PERIOD TIMEGRP       
+  "gtx_i_refclkout_pll0_i_clkout0_i_1" TS_gtx_i_tile0_refclkout_i / 0.5         
+HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout1_i_1 = PERIOD TIMEGRP       
+  "gtx_i_refclkout_pll0_i_clkout1_i_1" TS_gtx_i_tile0_refclkout_i HIGH         
+50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD TIMEGRP       
+  "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.625 HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD TIMEGRP       
+  "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P / 1.25 HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout0_i_3 = PERIOD TIMEGRP       
+  "gtx_i_refclkout_pll0_i_clkout0_i_3" TS_GTX_REFCLK_N / 0.625 HIGH 50%;
+
+ 1093 paths analyzed, 374 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   4.535ns.
+--------------------------------------------------------------------------------
+Slack:                  11.251ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1 (FF)
+  Destination:          xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1 (FF)
+  Requirement:          12.800ns
+  Data Path Delay:      1.092ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.244ns (3.354 - 3.598)
+  Source Clock:         gtx_usr_clk2 rising at 12.800ns
+  Destination Clock:    gtx_usr_clk rising at 25.600ns
+  Clock Uncertainty:    0.213ns
+
+  Clock Uncertainty:          0.213ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.171ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path: xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1 to xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y29.BQ      Tcko                  0.471   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc<3>
+                                                       xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1
+    SLICE_X41Y28.BX      net (fanout=1)        0.632   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc<1>
+    SLICE_X41Y28.CLK     Tdick                -0.011   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg<3>
+                                                       xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.092ns (0.460ns logic, 0.632ns route)
+                                                       (42.1% logic, 57.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  11.406ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0 (FF)
+  Destination:          xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0 (FF)
+  Requirement:          12.800ns
+  Data Path Delay:      0.937ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.244ns (3.354 - 3.598)
+  Source Clock:         gtx_usr_clk2 rising at 12.800ns
+  Destination Clock:    gtx_usr_clk rising at 25.600ns
+  Clock Uncertainty:    0.213ns
+
+  Clock Uncertainty:          0.213ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.171ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path: xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0 to xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y29.AQ      Tcko                  0.471   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc<3>
+                                                       xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0
+    SLICE_X41Y28.AX      net (fanout=1)        0.474   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc<0>
+    SLICE_X41Y28.CLK     Tdick                -0.008   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg<3>
+                                                       xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.937ns (0.463ns logic, 0.474ns route)
+                                                       (49.4% logic, 50.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  11.549ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6 (FF)
+  Destination:          xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6 (FF)
+  Requirement:          12.800ns
+  Data Path Delay:      0.760ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.278ns (3.354 - 3.632)
+  Source Clock:         gtx_usr_clk2 rising at 12.800ns
+  Destination Clock:    gtx_usr_clk rising at 25.600ns
+  Clock Uncertainty:    0.213ns
+
+  Clock Uncertainty:          0.213ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.171ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path: xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6 to xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y29.CQ      Tcko                  0.450   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc<7>
+                                                       xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6
+    SLICE_X43Y29.CX      net (fanout=1)        0.306   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc<6>
+    SLICE_X43Y29.CLK     Tdick                 0.004   xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg<7>
+                                                       xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6
+    -------------------------------------------------  ---------------------------
+    Total                                      0.760ns (0.454ns logic, 0.306ns route)
+                                                       (59.7% logic, 40.3% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_i_refclkout_pll0_i_clkout1_i_3 = PERIOD TIMEGRP       
+  "gtx_i_refclkout_pll0_i_clkout1_i_3" TS_GTX_REFCLK_N / 1.25 HIGH 50%;
+
+ 2463 paths analyzed, 462 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  10.956ns.
+--------------------------------------------------------------------------------
+Slack:                  1.844ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i (HSIO)
+  Destination:          xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP (RAM)
+  Requirement:          12.800ns
+  Data Path Delay:      10.616ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.255ns (1.408 - 1.663)
+  Source Clock:         gtx_usr_clk2 rising at 0.000ns
+  Destination Clock:    gtx_usr_clk2 rising at 12.800ns
+  Clock Uncertainty:    0.085ns
+
+  Clock Uncertainty:          0.085ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.154ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i to xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    GTX_DUAL_X0Y0.RXDATA13 Tgtxcko_RXDATA        1.801   gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i
+                                                         gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i
+    SLICE_X64Y17.C1        net (fanout=5)        2.360   gtx_rx_data_high<3>
+    SLICE_X64Y17.CMUX      Tilo                  0.376   N0
+                                                         LEDS_1_mux000011
+                                                         LEDS_1_mux00001_f7
+    SLICE_X39Y36.A2        net (fanout=5)        2.972   N0
+    SLICE_X39Y36.A         Tilo                  0.094   N37
+                                                         fifo_wr_en1
+    SLICE_X33Y36.B5        net (fanout=3)        0.538   fifo_wr_en
+    SLICE_X33Y36.B         Tilo                  0.094   xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i
+                                                         xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/ram_wr_en_i1
+    RAMB36_X3Y5.WEAL1      net (fanout=14)       1.757   xmit_fifo_i/BU2/U0/grf.rf/ram_wr_en
+    RAMB36_X3Y5.CLKARDCLKL Trcck_WEA             0.624   xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+                                                         xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+    ---------------------------------------------------  ---------------------------
+    Total                                       10.616ns (2.989ns logic, 7.627ns route)
+                                                         (28.2% logic, 71.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.844ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i (HSIO)
+  Destination:          xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP (RAM)
+  Requirement:          12.800ns
+  Data Path Delay:      10.616ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.255ns (1.408 - 1.663)
+  Source Clock:         gtx_usr_clk2 rising at 0.000ns
+  Destination Clock:    gtx_usr_clk2 rising at 12.800ns
+  Clock Uncertainty:    0.085ns
+
+  Clock Uncertainty:          0.085ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.154ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i to xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    GTX_DUAL_X0Y0.RXDATA13 Tgtxcko_RXDATA        1.801   gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i
+                                                         gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i
+    SLICE_X64Y17.C1        net (fanout=5)        2.360   gtx_rx_data_high<3>
+    SLICE_X64Y17.CMUX      Tilo                  0.376   N0
+                                                         LEDS_1_mux000011
+                                                         LEDS_1_mux00001_f7
+    SLICE_X39Y36.A2        net (fanout=5)        2.972   N0
+    SLICE_X39Y36.A         Tilo                  0.094   N37
+                                                         fifo_wr_en1
+    SLICE_X33Y36.B5        net (fanout=3)        0.538   fifo_wr_en
+    SLICE_X33Y36.B         Tilo                  0.094   xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i
+                                                         xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/ram_wr_en_i1
+    RAMB36_X3Y5.WEAL0      net (fanout=14)       1.757   xmit_fifo_i/BU2/U0/grf.rf/ram_wr_en
+    RAMB36_X3Y5.CLKARDCLKL Trcck_WEA             0.624   xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+                                                         xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+    ---------------------------------------------------  ---------------------------
+    Total                                       10.616ns (2.989ns logic, 7.627ns route)
+                                                         (28.2% logic, 71.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.951ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i (HSIO)
+  Destination:          xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP (RAM)
+  Requirement:          12.800ns
+  Data Path Delay:      10.509ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.255ns (1.408 - 1.663)
+  Source Clock:         gtx_usr_clk2 rising at 0.000ns
+  Destination Clock:    gtx_usr_clk2 rising at 12.800ns
+  Clock Uncertainty:    0.085ns
+
+  Clock Uncertainty:          0.085ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.154ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i to xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    GTX_DUAL_X0Y0.RXDATA10 Tgtxcko_RXDATA        1.801   gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i
+                                                         gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i
+    SLICE_X64Y17.C2        net (fanout=4)        2.253   gtx_rx_data_high<0>
+    SLICE_X64Y17.CMUX      Tilo                  0.376   N0
+                                                         LEDS_1_mux000011
+                                                         LEDS_1_mux00001_f7
+    SLICE_X39Y36.A2        net (fanout=5)        2.972   N0
+    SLICE_X39Y36.A         Tilo                  0.094   N37
+                                                         fifo_wr_en1
+    SLICE_X33Y36.B5        net (fanout=3)        0.538   fifo_wr_en
+    SLICE_X33Y36.B         Tilo                  0.094   xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i
+                                                         xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/ram_wr_en_i1
+    RAMB36_X3Y5.WEAL1      net (fanout=14)       1.757   xmit_fifo_i/BU2/U0/grf.rf/ram_wr_en
+    RAMB36_X3Y5.CLKARDCLKL Trcck_WEA             0.624   xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+                                                         xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP
+    ---------------------------------------------------  ---------------------------
+    Total                                       10.509ns (2.989ns logic, 7.520ns route)
+                                                         (28.4% logic, 71.6% route)
+
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_GTX_REFCLK_P
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_GTX_REFCLK_P                |     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| TS_gtx_i_refclkout_pll0_i_clko|     25.600ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut0_i_2                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     12.800ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut1_i_2                       |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_GTX_REFCLK_N
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_GTX_REFCLK_N                |     16.000ns|          N/A|     13.695ns|            0|            0|            0|         3556|
+| TS_gtx_i_refclkout_pll0_i_clko|     25.600ns|      4.535ns|          N/A|            0|            0|         1093|            0|
+| ut0_i_3                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     12.800ns|     10.956ns|          N/A|            0|            0|         2463|            0|
+| ut1_i_3                       |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_gtx_i_tile0_refclkout_i
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_gtx_i_tile0_refclkout_i     |     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| TS_gtx_i_refclkout_pll0_i_clko|     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut0_i                         |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|      8.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut1_i                         |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut0_i_0                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|      8.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut1_i_0                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     32.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut0_i_1                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut1_i_1                       |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock GTX_REFCLK_N
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+GTX_REFCLK_N   |   10.956|         |         |         |
+GTX_REFCLK_P   |   10.956|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock GTX_REFCLK_P
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+GTX_REFCLK_N   |   10.956|         |         |         |
+GTX_REFCLK_P   |   10.956|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 3556 paths, 0 nets, and 1030 connections
+
+Design statistics:
+   Minimum period:  10.956ns{1}   (Maximum frequency:  91.274MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Mar 27 20:54:55 2009 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 281 MB
+
+
+

@@ -1,0 +1,41 @@
+Release 10.1.03 - xst K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to ./xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/tmp/infinibandfpga/RocketIO_Demo_HW/ip_compatibility.vhd" in Library work.
+Compiling vhdl file "/tmp/infinibandfpga/RocketIO_Demo_HW/uart_components.vhd" in Library work.
+Compiling vhdl file "/tmp/infinibandfpga/RocketIO_Demo_HW/baud_pulse_generator.vhd" in Library work.
+Architecture behavioral of Entity baud_pulse_generator is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/RocketIO_Demo_HW/uart_fifo.vhd" in Library work.
+Architecture behavioral of Entity uart_fifo is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/RocketIO_Demo_HW/receiver.vhd" in Library work.
+Architecture behavioral of Entity receiver is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/RocketIO_Demo_HW/xmitter.vhd" in Library work.
+Architecture behavioral of Entity xmitter is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/RocketIO_Demo_HW/UART.vhd" in Library work.
+Entity <uart> compiled.
+Entity <uart> (Architecture <structural>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> 
+
+
+Total memory usage is 116088 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

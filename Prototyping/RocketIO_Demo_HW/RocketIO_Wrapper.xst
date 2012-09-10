@@ -1,0 +1,4 @@
+set -tmpdir "./xst/projnav.tmp"
+elaborate
+-ifn RocketIO_Wrapper.prj
+-ifmt mixed

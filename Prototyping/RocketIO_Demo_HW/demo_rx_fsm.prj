@@ -1,0 +1,3 @@
+vhdl InfiniBand "../Physical/Physlayer.vhd"
+vhdl InfiniBand "../Physical/Idle_LFSR.vhd"
+vhdl work "demo_rx_fsm.vhd"

@@ -1,0 +1,1833 @@
+//! **************************************************************************
+// Written by: Map K.39 on Fri Mar 27 20:53:42 2009
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "UART_RX" LOCATE = SITE "AG15" LEVEL 1;
+COMP "UART_TX" LOCATE = SITE "AG20" LEVEL 1;
+COMP "LEDS<0>" LOCATE = SITE "AE24" LEVEL 1;
+COMP "LEDS<1>" LOCATE = SITE "AD24" LEVEL 1;
+COMP "LEDS<2>" LOCATE = SITE "AD25" LEVEL 1;
+COMP "LEDS<3>" LOCATE = SITE "G16" LEVEL 1;
+COMP "LEDS<4>" LOCATE = SITE "AD26" LEVEL 1;
+COMP "LEDS<5>" LOCATE = SITE "G15" LEVEL 1;
+COMP "LEDS<6>" LOCATE = SITE "L18" LEVEL 1;
+COMP "LEDS<7>" LOCATE = SITE "H18" LEVEL 1;
+COMP "TX_INHIBIT" LOCATE = SITE "U25" LEVEL 1;
+COMP "GTX_REFCLK_N" LOCATE = SITE "H3" LEVEL 1;
+COMP "GTX_REFCLK_P" LOCATE = SITE "H4" LEVEL 1;
+COMP "RESET" LOCATE = SITE "AJ6" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "AC24" LEVEL 1;
+COMP "SW<1>" LOCATE = SITE "AC25" LEVEL 1;
+COMP "SW<2>" LOCATE = SITE "AE26" LEVEL 1;
+PIN gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430> = BEL
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i" PINNAME
+        RXUSRCLK20;
+PIN gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431> = BEL
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i" PINNAME
+        RXUSRCLK21;
+PIN gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654> = BEL
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i" PINNAME
+        TXUSRCLK20;
+PIN gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655> = BEL
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i" PINNAME
+        TXUSRCLK21;
+PIN
+        xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<32>
+        = BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP"
+        PINNAME CLKAL;
+PIN
+        xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<110>
+        = BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP"
+        PINNAME REGCLKAL;
+TIMEGRP gtx_i/refclkout_pll0_i/clkout1_i = BEL "gtx_rx_fsm_i/cstate_0" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" BEL
+        "recv_i/baud_gen/counter_5" BEL "recv_i/baud_gen/counter_4" BEL
+        "recv_i/baud_gen/counter_3" BEL "recv_i/baud_gen/counter_2" BEL
+        "recv_i/baud_gen/counter_1" BEL "recv_i/baud_gen/counter_0" BEL
+        "recv_i/bit_counter_3" BEL "recv_i/bit_counter_2" BEL
+        "recv_i/bit_counter_1" BEL "recv_i/bit_counter_0" BEL
+        "recv_i/half_counter_3" BEL "recv_i/half_counter_2" BEL
+        "recv_i/half_counter_1" BEL "recv_i/half_counter_0" BEL
+        "recv_i/RX_DATA_7" BEL "recv_i/RX_DATA_6" BEL "recv_i/RX_DATA_5" BEL
+        "recv_i/RX_DATA_4" BEL "recv_i/RX_DATA_3" BEL "recv_i/RX_DATA_2" BEL
+        "recv_i/RX_DATA_1" BEL "recv_i/RX_DATA_0" BEL "recv_i/rx_register_7"
+        BEL "recv_i/rx_register_6" BEL "recv_i/rx_register_5" BEL
+        "recv_i/rx_register_4" BEL "recv_i/rx_register_3" BEL
+        "recv_i/rx_register_2" BEL "recv_i/rx_register_1" BEL
+        "recv_i/rx_register_0" BEL "uart_rx_fsm_i/counter_11" BEL
+        "uart_rx_fsm_i/counter_10" BEL "uart_rx_fsm_i/counter_9" BEL
+        "uart_rx_fsm_i/counter_8" BEL "uart_rx_fsm_i/counter_7" BEL
+        "uart_rx_fsm_i/counter_6" BEL "uart_rx_fsm_i/counter_5" BEL
+        "uart_rx_fsm_i/counter_4" BEL "uart_rx_fsm_i/counter_3" BEL
+        "uart_rx_fsm_i/counter_2" BEL "uart_rx_fsm_i/counter_1" BEL
+        "uart_rx_fsm_i/counter_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_10" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_9" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_7" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_6" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_8" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_4" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_3" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_5" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_1" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_2" BEL
+        "uart_rx_fsm_i/cstate_FSM_FFd1" BEL "uart_rx_fsm_i/cstate_FSM_FFd2"
+        BEL "uart_rx_fsm_i/recvd_char.low_2" BEL
+        "uart_rx_fsm_i/recvd_char.low_1" BEL "uart_rx_fsm_i/recvd_char.low_0"
+        BEL "uart_rx_fsm_i/recvd_char.high_4" BEL
+        "uart_rx_fsm_i/recvd_char.high_3" BEL
+        "uart_rx_fsm_i/recvd_char.high_2" BEL
+        "uart_rx_fsm_i/recvd_char.high_1" BEL
+        "uart_rx_fsm_i/recvd_char.high_0" BEL "recv_i/done_pulse" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<32>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<110>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout1_i = BEL "gtx_rx_fsm_i/cstate_0" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" BEL
+        "recv_i/baud_gen/counter_5" BEL "recv_i/baud_gen/counter_4" BEL
+        "recv_i/baud_gen/counter_3" BEL "recv_i/baud_gen/counter_2" BEL
+        "recv_i/baud_gen/counter_1" BEL "recv_i/baud_gen/counter_0" BEL
+        "recv_i/bit_counter_3" BEL "recv_i/bit_counter_2" BEL
+        "recv_i/bit_counter_1" BEL "recv_i/bit_counter_0" BEL
+        "recv_i/half_counter_3" BEL "recv_i/half_counter_2" BEL
+        "recv_i/half_counter_1" BEL "recv_i/half_counter_0" BEL
+        "recv_i/RX_DATA_7" BEL "recv_i/RX_DATA_6" BEL "recv_i/RX_DATA_5" BEL
+        "recv_i/RX_DATA_4" BEL "recv_i/RX_DATA_3" BEL "recv_i/RX_DATA_2" BEL
+        "recv_i/RX_DATA_1" BEL "recv_i/RX_DATA_0" BEL "recv_i/rx_register_7"
+        BEL "recv_i/rx_register_6" BEL "recv_i/rx_register_5" BEL
+        "recv_i/rx_register_4" BEL "recv_i/rx_register_3" BEL
+        "recv_i/rx_register_2" BEL "recv_i/rx_register_1" BEL
+        "recv_i/rx_register_0" BEL "uart_rx_fsm_i/counter_11" BEL
+        "uart_rx_fsm_i/counter_10" BEL "uart_rx_fsm_i/counter_9" BEL
+        "uart_rx_fsm_i/counter_8" BEL "uart_rx_fsm_i/counter_7" BEL
+        "uart_rx_fsm_i/counter_6" BEL "uart_rx_fsm_i/counter_5" BEL
+        "uart_rx_fsm_i/counter_4" BEL "uart_rx_fsm_i/counter_3" BEL
+        "uart_rx_fsm_i/counter_2" BEL "uart_rx_fsm_i/counter_1" BEL
+        "uart_rx_fsm_i/counter_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_10" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_9" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_7" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_6" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_8" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_4" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_3" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_5" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_1" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_2" BEL
+        "uart_rx_fsm_i/cstate_FSM_FFd1" BEL "uart_rx_fsm_i/cstate_FSM_FFd2"
+        BEL "uart_rx_fsm_i/recvd_char.low_2" BEL
+        "uart_rx_fsm_i/recvd_char.low_1" BEL "uart_rx_fsm_i/recvd_char.low_0"
+        BEL "uart_rx_fsm_i/recvd_char.high_4" BEL
+        "uart_rx_fsm_i/recvd_char.high_3" BEL
+        "uart_rx_fsm_i/recvd_char.high_2" BEL
+        "uart_rx_fsm_i/recvd_char.high_1" BEL
+        "uart_rx_fsm_i/recvd_char.high_0" BEL "recv_i/done_pulse" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<32>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<110>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout1_i_0 = BEL "gtx_rx_fsm_i/cstate_0" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" BEL
+        "recv_i/baud_gen/counter_5" BEL "recv_i/baud_gen/counter_4" BEL
+        "recv_i/baud_gen/counter_3" BEL "recv_i/baud_gen/counter_2" BEL
+        "recv_i/baud_gen/counter_1" BEL "recv_i/baud_gen/counter_0" BEL
+        "recv_i/bit_counter_3" BEL "recv_i/bit_counter_2" BEL
+        "recv_i/bit_counter_1" BEL "recv_i/bit_counter_0" BEL
+        "recv_i/half_counter_3" BEL "recv_i/half_counter_2" BEL
+        "recv_i/half_counter_1" BEL "recv_i/half_counter_0" BEL
+        "recv_i/RX_DATA_7" BEL "recv_i/RX_DATA_6" BEL "recv_i/RX_DATA_5" BEL
+        "recv_i/RX_DATA_4" BEL "recv_i/RX_DATA_3" BEL "recv_i/RX_DATA_2" BEL
+        "recv_i/RX_DATA_1" BEL "recv_i/RX_DATA_0" BEL "recv_i/rx_register_7"
+        BEL "recv_i/rx_register_6" BEL "recv_i/rx_register_5" BEL
+        "recv_i/rx_register_4" BEL "recv_i/rx_register_3" BEL
+        "recv_i/rx_register_2" BEL "recv_i/rx_register_1" BEL
+        "recv_i/rx_register_0" BEL "uart_rx_fsm_i/counter_11" BEL
+        "uart_rx_fsm_i/counter_10" BEL "uart_rx_fsm_i/counter_9" BEL
+        "uart_rx_fsm_i/counter_8" BEL "uart_rx_fsm_i/counter_7" BEL
+        "uart_rx_fsm_i/counter_6" BEL "uart_rx_fsm_i/counter_5" BEL
+        "uart_rx_fsm_i/counter_4" BEL "uart_rx_fsm_i/counter_3" BEL
+        "uart_rx_fsm_i/counter_2" BEL "uart_rx_fsm_i/counter_1" BEL
+        "uart_rx_fsm_i/counter_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_10" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_9" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_7" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_6" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_8" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_4" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_3" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_5" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_1" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_2" BEL
+        "uart_rx_fsm_i/cstate_FSM_FFd1" BEL "uart_rx_fsm_i/cstate_FSM_FFd2"
+        BEL "uart_rx_fsm_i/recvd_char.low_2" BEL
+        "uart_rx_fsm_i/recvd_char.low_1" BEL "uart_rx_fsm_i/recvd_char.low_0"
+        BEL "uart_rx_fsm_i/recvd_char.high_4" BEL
+        "uart_rx_fsm_i/recvd_char.high_3" BEL
+        "uart_rx_fsm_i/recvd_char.high_2" BEL
+        "uart_rx_fsm_i/recvd_char.high_1" BEL
+        "uart_rx_fsm_i/recvd_char.high_0" BEL "recv_i/done_pulse" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<32>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<110>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout1_i_1 = BEL "gtx_rx_fsm_i/cstate_0" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" BEL
+        "recv_i/baud_gen/counter_5" BEL "recv_i/baud_gen/counter_4" BEL
+        "recv_i/baud_gen/counter_3" BEL "recv_i/baud_gen/counter_2" BEL
+        "recv_i/baud_gen/counter_1" BEL "recv_i/baud_gen/counter_0" BEL
+        "recv_i/bit_counter_3" BEL "recv_i/bit_counter_2" BEL
+        "recv_i/bit_counter_1" BEL "recv_i/bit_counter_0" BEL
+        "recv_i/half_counter_3" BEL "recv_i/half_counter_2" BEL
+        "recv_i/half_counter_1" BEL "recv_i/half_counter_0" BEL
+        "recv_i/RX_DATA_7" BEL "recv_i/RX_DATA_6" BEL "recv_i/RX_DATA_5" BEL
+        "recv_i/RX_DATA_4" BEL "recv_i/RX_DATA_3" BEL "recv_i/RX_DATA_2" BEL
+        "recv_i/RX_DATA_1" BEL "recv_i/RX_DATA_0" BEL "recv_i/rx_register_7"
+        BEL "recv_i/rx_register_6" BEL "recv_i/rx_register_5" BEL
+        "recv_i/rx_register_4" BEL "recv_i/rx_register_3" BEL
+        "recv_i/rx_register_2" BEL "recv_i/rx_register_1" BEL
+        "recv_i/rx_register_0" BEL "uart_rx_fsm_i/counter_11" BEL
+        "uart_rx_fsm_i/counter_10" BEL "uart_rx_fsm_i/counter_9" BEL
+        "uart_rx_fsm_i/counter_8" BEL "uart_rx_fsm_i/counter_7" BEL
+        "uart_rx_fsm_i/counter_6" BEL "uart_rx_fsm_i/counter_5" BEL
+        "uart_rx_fsm_i/counter_4" BEL "uart_rx_fsm_i/counter_3" BEL
+        "uart_rx_fsm_i/counter_2" BEL "uart_rx_fsm_i/counter_1" BEL
+        "uart_rx_fsm_i/counter_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_10" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_9" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_7" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_6" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_8" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_4" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_3" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_5" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_1" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_2" BEL
+        "uart_rx_fsm_i/cstate_FSM_FFd1" BEL "uart_rx_fsm_i/cstate_FSM_FFd2"
+        BEL "uart_rx_fsm_i/recvd_char.low_2" BEL
+        "uart_rx_fsm_i/recvd_char.low_1" BEL "uart_rx_fsm_i/recvd_char.low_0"
+        BEL "uart_rx_fsm_i/recvd_char.high_4" BEL
+        "uart_rx_fsm_i/recvd_char.high_3" BEL
+        "uart_rx_fsm_i/recvd_char.high_2" BEL
+        "uart_rx_fsm_i/recvd_char.high_1" BEL
+        "uart_rx_fsm_i/recvd_char.high_0" BEL "recv_i/done_pulse" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<32>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<110>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout1_i_2 = BEL "gtx_rx_fsm_i/cstate_0" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" BEL
+        "recv_i/baud_gen/counter_5" BEL "recv_i/baud_gen/counter_4" BEL
+        "recv_i/baud_gen/counter_3" BEL "recv_i/baud_gen/counter_2" BEL
+        "recv_i/baud_gen/counter_1" BEL "recv_i/baud_gen/counter_0" BEL
+        "recv_i/bit_counter_3" BEL "recv_i/bit_counter_2" BEL
+        "recv_i/bit_counter_1" BEL "recv_i/bit_counter_0" BEL
+        "recv_i/half_counter_3" BEL "recv_i/half_counter_2" BEL
+        "recv_i/half_counter_1" BEL "recv_i/half_counter_0" BEL
+        "recv_i/RX_DATA_7" BEL "recv_i/RX_DATA_6" BEL "recv_i/RX_DATA_5" BEL
+        "recv_i/RX_DATA_4" BEL "recv_i/RX_DATA_3" BEL "recv_i/RX_DATA_2" BEL
+        "recv_i/RX_DATA_1" BEL "recv_i/RX_DATA_0" BEL "recv_i/rx_register_7"
+        BEL "recv_i/rx_register_6" BEL "recv_i/rx_register_5" BEL
+        "recv_i/rx_register_4" BEL "recv_i/rx_register_3" BEL
+        "recv_i/rx_register_2" BEL "recv_i/rx_register_1" BEL
+        "recv_i/rx_register_0" BEL "uart_rx_fsm_i/counter_11" BEL
+        "uart_rx_fsm_i/counter_10" BEL "uart_rx_fsm_i/counter_9" BEL
+        "uart_rx_fsm_i/counter_8" BEL "uart_rx_fsm_i/counter_7" BEL
+        "uart_rx_fsm_i/counter_6" BEL "uart_rx_fsm_i/counter_5" BEL
+        "uart_rx_fsm_i/counter_4" BEL "uart_rx_fsm_i/counter_3" BEL
+        "uart_rx_fsm_i/counter_2" BEL "uart_rx_fsm_i/counter_1" BEL
+        "uart_rx_fsm_i/counter_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_10" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_9" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_7" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_6" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_8" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_4" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_3" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_5" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_1" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_2" BEL
+        "uart_rx_fsm_i/cstate_FSM_FFd1" BEL "uart_rx_fsm_i/cstate_FSM_FFd2"
+        BEL "uart_rx_fsm_i/recvd_char.low_2" BEL
+        "uart_rx_fsm_i/recvd_char.low_1" BEL "uart_rx_fsm_i/recvd_char.low_0"
+        BEL "uart_rx_fsm_i/recvd_char.high_4" BEL
+        "uart_rx_fsm_i/recvd_char.high_3" BEL
+        "uart_rx_fsm_i/recvd_char.high_2" BEL
+        "uart_rx_fsm_i/recvd_char.high_1" BEL
+        "uart_rx_fsm_i/recvd_char.high_0" BEL "recv_i/done_pulse" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<32>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<110>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout1_i_3 = BEL "gtx_rx_fsm_i/cstate_0" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" BEL
+        "recv_i/baud_gen/counter_5" BEL "recv_i/baud_gen/counter_4" BEL
+        "recv_i/baud_gen/counter_3" BEL "recv_i/baud_gen/counter_2" BEL
+        "recv_i/baud_gen/counter_1" BEL "recv_i/baud_gen/counter_0" BEL
+        "recv_i/bit_counter_3" BEL "recv_i/bit_counter_2" BEL
+        "recv_i/bit_counter_1" BEL "recv_i/bit_counter_0" BEL
+        "recv_i/half_counter_3" BEL "recv_i/half_counter_2" BEL
+        "recv_i/half_counter_1" BEL "recv_i/half_counter_0" BEL
+        "recv_i/RX_DATA_7" BEL "recv_i/RX_DATA_6" BEL "recv_i/RX_DATA_5" BEL
+        "recv_i/RX_DATA_4" BEL "recv_i/RX_DATA_3" BEL "recv_i/RX_DATA_2" BEL
+        "recv_i/RX_DATA_1" BEL "recv_i/RX_DATA_0" BEL "recv_i/rx_register_7"
+        BEL "recv_i/rx_register_6" BEL "recv_i/rx_register_5" BEL
+        "recv_i/rx_register_4" BEL "recv_i/rx_register_3" BEL
+        "recv_i/rx_register_2" BEL "recv_i/rx_register_1" BEL
+        "recv_i/rx_register_0" BEL "uart_rx_fsm_i/counter_11" BEL
+        "uart_rx_fsm_i/counter_10" BEL "uart_rx_fsm_i/counter_9" BEL
+        "uart_rx_fsm_i/counter_8" BEL "uart_rx_fsm_i/counter_7" BEL
+        "uart_rx_fsm_i/counter_6" BEL "uart_rx_fsm_i/counter_5" BEL
+        "uart_rx_fsm_i/counter_4" BEL "uart_rx_fsm_i/counter_3" BEL
+        "uart_rx_fsm_i/counter_2" BEL "uart_rx_fsm_i/counter_1" BEL
+        "uart_rx_fsm_i/counter_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_10" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_9" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_7" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_6" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_8" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_4" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_3" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_5" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_1" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_2" BEL
+        "uart_rx_fsm_i/cstate_FSM_FFd1" BEL "uart_rx_fsm_i/cstate_FSM_FFd2"
+        BEL "uart_rx_fsm_i/recvd_char.low_2" BEL
+        "uart_rx_fsm_i/recvd_char.low_1" BEL "uart_rx_fsm_i/recvd_char.low_0"
+        BEL "uart_rx_fsm_i/recvd_char.high_4" BEL
+        "uart_rx_fsm_i/recvd_char.high_3" BEL
+        "uart_rx_fsm_i/recvd_char.high_2" BEL
+        "uart_rx_fsm_i/recvd_char.high_1" BEL
+        "uart_rx_fsm_i/recvd_char.high_0" BEL "recv_i/done_pulse" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<32>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<110>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout1_i_4 = BEL "gtx_rx_fsm_i/cstate_0" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<430>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<431>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<654>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<655>" BEL
+        "recv_i/baud_gen/counter_5" BEL "recv_i/baud_gen/counter_4" BEL
+        "recv_i/baud_gen/counter_3" BEL "recv_i/baud_gen/counter_2" BEL
+        "recv_i/baud_gen/counter_1" BEL "recv_i/baud_gen/counter_0" BEL
+        "recv_i/bit_counter_3" BEL "recv_i/bit_counter_2" BEL
+        "recv_i/bit_counter_1" BEL "recv_i/bit_counter_0" BEL
+        "recv_i/half_counter_3" BEL "recv_i/half_counter_2" BEL
+        "recv_i/half_counter_1" BEL "recv_i/half_counter_0" BEL
+        "recv_i/RX_DATA_7" BEL "recv_i/RX_DATA_6" BEL "recv_i/RX_DATA_5" BEL
+        "recv_i/RX_DATA_4" BEL "recv_i/RX_DATA_3" BEL "recv_i/RX_DATA_2" BEL
+        "recv_i/RX_DATA_1" BEL "recv_i/RX_DATA_0" BEL "recv_i/rx_register_7"
+        BEL "recv_i/rx_register_6" BEL "recv_i/rx_register_5" BEL
+        "recv_i/rx_register_4" BEL "recv_i/rx_register_3" BEL
+        "recv_i/rx_register_2" BEL "recv_i/rx_register_1" BEL
+        "recv_i/rx_register_0" BEL "uart_rx_fsm_i/counter_11" BEL
+        "uart_rx_fsm_i/counter_10" BEL "uart_rx_fsm_i/counter_9" BEL
+        "uart_rx_fsm_i/counter_8" BEL "uart_rx_fsm_i/counter_7" BEL
+        "uart_rx_fsm_i/counter_6" BEL "uart_rx_fsm_i/counter_5" BEL
+        "uart_rx_fsm_i/counter_4" BEL "uart_rx_fsm_i/counter_3" BEL
+        "uart_rx_fsm_i/counter_2" BEL "uart_rx_fsm_i/counter_1" BEL
+        "uart_rx_fsm_i/counter_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_10" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_9" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_7" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_6" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_8" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_4" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_3" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_5" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_1" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_0" BEL
+        "uart_rx_fsm_i/lfsr_inst/current_value_2" BEL
+        "uart_rx_fsm_i/cstate_FSM_FFd1" BEL "uart_rx_fsm_i/cstate_FSM_FFd2"
+        BEL "uart_rx_fsm_i/recvd_char.low_2" BEL
+        "uart_rx_fsm_i/recvd_char.low_1" BEL "uart_rx_fsm_i/recvd_char.low_0"
+        BEL "uart_rx_fsm_i/recvd_char.high_4" BEL
+        "uart_rx_fsm_i/recvd_char.high_3" BEL
+        "uart_rx_fsm_i/recvd_char.high_2" BEL
+        "uart_rx_fsm_i/recvd_char.high_1" BEL
+        "uart_rx_fsm_i/recvd_char.high_0" BEL "recv_i/done_pulse" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/wr_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr/count_d2_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<32>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<110>";
+PIN gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428> = BEL
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i" PINNAME
+        RXUSRCLK0;
+PIN gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429> = BEL
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i" PINNAME
+        RXUSRCLK1;
+PIN gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652> = BEL
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i" PINNAME
+        TXUSRCLK0;
+PIN gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653> = BEL
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i" PINNAME
+        TXUSRCLK1;
+PIN
+        xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<33>
+        = BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP"
+        PINNAME CLKBL;
+PIN
+        xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<111>
+        = BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP"
+        PINNAME REGCLKBL;
+TIMEGRP gtx_i/refclkout_pll0_i/clkout0_i = PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" BEL
+        "xmit_i/bpulse_gen/counter_8" BEL "xmit_i/bpulse_gen/counter_7" BEL
+        "xmit_i/bpulse_gen/counter_6" BEL "xmit_i/bpulse_gen/counter_5" BEL
+        "xmit_i/bpulse_gen/counter_4" BEL "xmit_i/bpulse_gen/counter_3" BEL
+        "xmit_i/bpulse_gen/counter_2" BEL "xmit_i/bpulse_gen/counter_1" BEL
+        "xmit_i/bpulse_gen/counter_0" BEL "xmit_i/last_bpulse" BEL
+        "xmit_i/tx_count_1" BEL "xmit_i/tx_count_0" BEL "xmit_i/tx_count_3"
+        BEL "xmit_i/tx_count_2" BEL "xmit_i/tx_finished" BEL
+        "xmit_i/bgen_reset" BEL "xmit_i/tx_register_8" BEL
+        "xmit_i/tx_register_7" BEL "xmit_i/tx_register_6" BEL
+        "xmit_i/tx_register_5" BEL "xmit_i/tx_register_4" BEL
+        "xmit_i/tx_register_3" BEL "xmit_i/tx_register_2" BEL
+        "xmit_i/tx_register_1" BEL "xmit_i/tx_register_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_fb" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<33>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<111>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout0_i = PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" BEL
+        "xmit_i/bpulse_gen/counter_8" BEL "xmit_i/bpulse_gen/counter_7" BEL
+        "xmit_i/bpulse_gen/counter_6" BEL "xmit_i/bpulse_gen/counter_5" BEL
+        "xmit_i/bpulse_gen/counter_4" BEL "xmit_i/bpulse_gen/counter_3" BEL
+        "xmit_i/bpulse_gen/counter_2" BEL "xmit_i/bpulse_gen/counter_1" BEL
+        "xmit_i/bpulse_gen/counter_0" BEL "xmit_i/last_bpulse" BEL
+        "xmit_i/tx_count_1" BEL "xmit_i/tx_count_0" BEL "xmit_i/tx_count_3"
+        BEL "xmit_i/tx_count_2" BEL "xmit_i/tx_finished" BEL
+        "xmit_i/bgen_reset" BEL "xmit_i/tx_register_8" BEL
+        "xmit_i/tx_register_7" BEL "xmit_i/tx_register_6" BEL
+        "xmit_i/tx_register_5" BEL "xmit_i/tx_register_4" BEL
+        "xmit_i/tx_register_3" BEL "xmit_i/tx_register_2" BEL
+        "xmit_i/tx_register_1" BEL "xmit_i/tx_register_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_fb" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<33>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<111>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout0_i_0 = PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" BEL
+        "xmit_i/bpulse_gen/counter_8" BEL "xmit_i/bpulse_gen/counter_7" BEL
+        "xmit_i/bpulse_gen/counter_6" BEL "xmit_i/bpulse_gen/counter_5" BEL
+        "xmit_i/bpulse_gen/counter_4" BEL "xmit_i/bpulse_gen/counter_3" BEL
+        "xmit_i/bpulse_gen/counter_2" BEL "xmit_i/bpulse_gen/counter_1" BEL
+        "xmit_i/bpulse_gen/counter_0" BEL "xmit_i/last_bpulse" BEL
+        "xmit_i/tx_count_1" BEL "xmit_i/tx_count_0" BEL "xmit_i/tx_count_3"
+        BEL "xmit_i/tx_count_2" BEL "xmit_i/tx_finished" BEL
+        "xmit_i/bgen_reset" BEL "xmit_i/tx_register_8" BEL
+        "xmit_i/tx_register_7" BEL "xmit_i/tx_register_6" BEL
+        "xmit_i/tx_register_5" BEL "xmit_i/tx_register_4" BEL
+        "xmit_i/tx_register_3" BEL "xmit_i/tx_register_2" BEL
+        "xmit_i/tx_register_1" BEL "xmit_i/tx_register_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_fb" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<33>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<111>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout0_i_1 = PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" BEL
+        "xmit_i/bpulse_gen/counter_8" BEL "xmit_i/bpulse_gen/counter_7" BEL
+        "xmit_i/bpulse_gen/counter_6" BEL "xmit_i/bpulse_gen/counter_5" BEL
+        "xmit_i/bpulse_gen/counter_4" BEL "xmit_i/bpulse_gen/counter_3" BEL
+        "xmit_i/bpulse_gen/counter_2" BEL "xmit_i/bpulse_gen/counter_1" BEL
+        "xmit_i/bpulse_gen/counter_0" BEL "xmit_i/last_bpulse" BEL
+        "xmit_i/tx_count_1" BEL "xmit_i/tx_count_0" BEL "xmit_i/tx_count_3"
+        BEL "xmit_i/tx_count_2" BEL "xmit_i/tx_finished" BEL
+        "xmit_i/bgen_reset" BEL "xmit_i/tx_register_8" BEL
+        "xmit_i/tx_register_7" BEL "xmit_i/tx_register_6" BEL
+        "xmit_i/tx_register_5" BEL "xmit_i/tx_register_4" BEL
+        "xmit_i/tx_register_3" BEL "xmit_i/tx_register_2" BEL
+        "xmit_i/tx_register_1" BEL "xmit_i/tx_register_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_fb" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<33>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<111>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout0_i_2 = PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" BEL
+        "xmit_i/bpulse_gen/counter_8" BEL "xmit_i/bpulse_gen/counter_7" BEL
+        "xmit_i/bpulse_gen/counter_6" BEL "xmit_i/bpulse_gen/counter_5" BEL
+        "xmit_i/bpulse_gen/counter_4" BEL "xmit_i/bpulse_gen/counter_3" BEL
+        "xmit_i/bpulse_gen/counter_2" BEL "xmit_i/bpulse_gen/counter_1" BEL
+        "xmit_i/bpulse_gen/counter_0" BEL "xmit_i/last_bpulse" BEL
+        "xmit_i/tx_count_1" BEL "xmit_i/tx_count_0" BEL "xmit_i/tx_count_3"
+        BEL "xmit_i/tx_count_2" BEL "xmit_i/tx_finished" BEL
+        "xmit_i/bgen_reset" BEL "xmit_i/tx_register_8" BEL
+        "xmit_i/tx_register_7" BEL "xmit_i/tx_register_6" BEL
+        "xmit_i/tx_register_5" BEL "xmit_i/tx_register_4" BEL
+        "xmit_i/tx_register_3" BEL "xmit_i/tx_register_2" BEL
+        "xmit_i/tx_register_1" BEL "xmit_i/tx_register_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_fb" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<33>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<111>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout0_i_3 = PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" BEL
+        "xmit_i/bpulse_gen/counter_8" BEL "xmit_i/bpulse_gen/counter_7" BEL
+        "xmit_i/bpulse_gen/counter_6" BEL "xmit_i/bpulse_gen/counter_5" BEL
+        "xmit_i/bpulse_gen/counter_4" BEL "xmit_i/bpulse_gen/counter_3" BEL
+        "xmit_i/bpulse_gen/counter_2" BEL "xmit_i/bpulse_gen/counter_1" BEL
+        "xmit_i/bpulse_gen/counter_0" BEL "xmit_i/last_bpulse" BEL
+        "xmit_i/tx_count_1" BEL "xmit_i/tx_count_0" BEL "xmit_i/tx_count_3"
+        BEL "xmit_i/tx_count_2" BEL "xmit_i/tx_finished" BEL
+        "xmit_i/bgen_reset" BEL "xmit_i/tx_register_8" BEL
+        "xmit_i/tx_register_7" BEL "xmit_i/tx_register_6" BEL
+        "xmit_i/tx_register_5" BEL "xmit_i/tx_register_4" BEL
+        "xmit_i/tx_register_3" BEL "xmit_i/tx_register_2" BEL
+        "xmit_i/tx_register_1" BEL "xmit_i/tx_register_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_fb" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<33>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<111>";
+TIMEGRP gtx_i_refclkout_pll0_i_clkout0_i_4 = PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<428>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<429>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<652>" PIN
+        "gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i/gtx_dual_i_pins<653>" BEL
+        "xmit_i/bpulse_gen/counter_8" BEL "xmit_i/bpulse_gen/counter_7" BEL
+        "xmit_i/bpulse_gen/counter_6" BEL "xmit_i/bpulse_gen/counter_5" BEL
+        "xmit_i/bpulse_gen/counter_4" BEL "xmit_i/bpulse_gen/counter_3" BEL
+        "xmit_i/bpulse_gen/counter_2" BEL "xmit_i/bpulse_gen/counter_1" BEL
+        "xmit_i/bpulse_gen/counter_0" BEL "xmit_i/last_bpulse" BEL
+        "xmit_i/tx_count_1" BEL "xmit_i/tx_count_0" BEL "xmit_i/tx_count_3"
+        BEL "xmit_i/tx_count_2" BEL "xmit_i/tx_finished" BEL
+        "xmit_i/bgen_reset" BEL "xmit_i/tx_register_8" BEL
+        "xmit_i/tx_register_7" BEL "xmit_i/tx_register_6" BEL
+        "xmit_i/tx_register_5" BEL "xmit_i/tx_register_4" BEL
+        "xmit_i/tx_register_3" BEL "xmit_i/tx_register_2" BEL
+        "xmit_i/tx_register_1" BEL "xmit_i/tx_register_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg_d1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_asreg" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/rstblk/rd_rst_reg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/dout_i_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_bin_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/wr_pntr_gc_asreg_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx/rd_pntr_gc_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_9" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_8" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_7" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_6" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_5" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_4" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_3" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_2" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr/count_d1_0" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_fb" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/empty_fwft_i" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_1" BEL
+        "xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft/curr_fwft_state_0" PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<33>"
+        PIN
+        "xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP_pins<111>";
+PIN gtx_i/refclkout_pll0_i/pll_adv_i_pins<4> = BEL
+        "gtx_i/refclkout_pll0_i/pll_adv_i" PINNAME CLKIN1;
+TIMEGRP GTX_REFCLK_P = PIN "gtx_i/refclkout_pll0_i/pll_adv_i_pins<4>";
+TIMEGRP GTX_REFCLK_N = PIN "gtx_i/refclkout_pll0_i/pll_adv_i_pins<4>";
+TIMEGRP gtx_i/tile0_refclkout_i = PIN
+        "gtx_i/refclkout_pll0_i/pll_adv_i_pins<4>";
+TS_GTX_REFCLK_P = PERIOD TIMEGRP "GTX_REFCLK_P" 16 ns HIGH 50%;
+TS_GTX_REFCLK_N = PERIOD TIMEGRP "GTX_REFCLK_N" 16 ns HIGH 50%;
+TS_gtx_i_tile0_refclkout_i = PERIOD TIMEGRP "gtx_i/tile0_refclkout_i" 16 ns
+        HIGH 50%;
+TS_gtx_i_refclkout_pll0_i_clkout0_i = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout0_i" TS_gtx_i_tile0_refclkout_i HIGH
+        50%;
+TS_gtx_i_refclkout_pll0_i_clkout1_i = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout1_i" TS_gtx_i_tile0_refclkout_i / 2 HIGH
+        50%;
+TS_gtx_i_refclkout_pll0_i_clkout0_i_0 = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout0_i_0" TS_gtx_i_tile0_refclkout_i HIGH
+        50%;
+TS_gtx_i_refclkout_pll0_i_clkout1_i_0 = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout1_i_0" TS_gtx_i_tile0_refclkout_i / 2
+        HIGH 50%;
+TS_gtx_i_refclkout_pll0_i_clkout0_i_1 = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout0_i_1" TS_gtx_i_tile0_refclkout_i / 0.5
+        HIGH 50%;
+TS_gtx_i_refclkout_pll0_i_clkout1_i_1 = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout1_i_1" TS_gtx_i_tile0_refclkout_i HIGH
+        50%;
+TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.625 HIGH 50%;
+TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P / 1.25 HIGH 50%;
+TS_gtx_i_refclkout_pll0_i_clkout0_i_3 = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout0_i_3" TS_GTX_REFCLK_N / 0.625 HIGH 50%;
+TS_gtx_i_refclkout_pll0_i_clkout1_i_3 = PERIOD TIMEGRP
+        "gtx_i_refclkout_pll0_i_clkout1_i_3" TS_GTX_REFCLK_N / 1.25 HIGH 50%;
+SCHEMATIC END;
+

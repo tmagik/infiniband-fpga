@@ -1,0 +1,12 @@
+# Output products list for <xmit_fifo>
+xmit_fifo.asy
+xmit_fifo.ngc
+xmit_fifo.sym
+xmit_fifo.v
+xmit_fifo.veo
+xmit_fifo.vhd
+xmit_fifo.vho
+xmit_fifo.xco
+xmit_fifo_fifo_generator_v4_4_xst_1.ngc_xst.xrpt
+xmit_fifo_flist.txt
+xmit_fifo_xmdf.tcl

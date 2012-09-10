@@ -1,0 +1,283 @@
+Release 10.1.03 Map K.39 (lin)
+Xilinx Mapping Report File for Design 'RocketIO_Demo'
+
+Design Information
+------------------
+Command Line   : map -ise
+/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_HW.ise -intstyle
+ise -p xc5vfx70t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area -pr off -k 6
+-lc off -power off -o RocketIO_Demo_map.ncd RocketIO_Demo.ngd RocketIO_Demo.pcf 
+Target Device  : xc5vfx70t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.46.12.2 $
+Mapped Date    : Fri Mar 27 20:52:45 2009
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                   246 out of  44,800    1%
+    Number used as Flip Flops:                 246
+  Number of Slice LUTs:                        215 out of  44,800    1%
+    Number used as logic:                      213 out of  44,800    1%
+      Number using O6 output only:             161
+      Number using O5 output only:              19
+      Number using O5 and O6:                   33
+    Number used as exclusive route-thru:         2
+  Number of route-thrus:                        21 out of  89,600    1%
+    Number using O6 output only:                21
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   128 out of  11,200    1%
+  Number of LUT Flip Flop pairs used:          338
+    Number with an unused Flip Flop:            92 out of     338   27%
+    Number with an unused LUT:                 123 out of     338   36%
+    Number of fully used LUT-FF pairs:         123 out of     338   36%
+    Number of unique control sets:              22
+    Number of slice register sites lost
+      to control set restrictions:              26 out of  44,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        15 out of     640    2%
+    Number of bonded IPADs:                      6
+    Number of bonded OPADs                       4
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                       1 out of     148    1%
+    Number using BlockRAM only:                  1
+    Total primitives used:
+      Number of 18k BlockRAM used:               1
+    Total Memory used (KB):                     18 out of   5,328    1%
+  Number of BUFG/BUFGCTRLs:                      3 out of      32    9%
+    Number used as BUFGs:                        3
+  Number of BUFDSs:                              1 out of       8   12%
+  Number of GTX_DUALs:                           1 out of       8   12%
+  Number of PLL_ADVs:                            1 out of       6   16%
+
+Peak Memory Usage:  413 MB
+Total REAL time to MAP completion:  59 secs 
+Total CPU time to MAP completion:   58 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:1724 - One or more GTPs are being used in this design.
+   Evaluate the SelectIO-To-GTP Crosstalk section of the Virtex-5 RocketIO GTP
+   Transceiver User Guide to ensure that the design SelectIO usage meets the
+   guidelines to minimize the impact on GTP performance. 
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:856 - PLL_ADV gtx_i/refclkout_pll0_i/pll_adv_i CLKIN2 pin was
+   disconnected because a constant 1 is driving the CLKINSEL pin.
+INFO:MapLib:841 - Changing COMPENSATION attribute from SYSTEM_SYNCHRONOUS to
+   INTERNAL for PLL_ADV gtx_i/refclkout_pll0_i/pll_adv_i.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Timing:3377 - Intersecting Constraints found and resolved.  For more
+   information see the TSI report.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   4 block(s) removed
+   4 block(s) optimized away
+   2 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "gtx_i/refclkout_pll0_i/clkout2_bufg_i" (CKBUF) removed.
+ The signal "gtx_i/refclkout_pll0_i/clkout2_i" is loadless and has been removed.
+Loadless block "gtx_i/refclkout_pll0_i/clkout3_bufg_i" (CKBUF) removed.
+ The signal "gtx_i/refclkout_pll0_i/clkout3_i" is loadless and has been removed.
+Unused block "xmit_fifo_i/GND" (ZERO) removed.
+Unused block "xmit_fifo_i/VCC" (ONE) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		xmit_fifo_i/BU2/XST_GND
+VCC 		xmit_fifo_i/BU2/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Strength | Rate |              |          | Delay    |
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+| GTX_REFCLK_N                       | IPAD             | INPUT     |                      |          |      |              |          |          |
+| GTX_REFCLK_P                       | IPAD             | INPUT     |                      |          |      |              |          |          |
+| GTX_RXN<0>                         | IPAD             | INPUT     |                      |          |      |              |          |          |
+| GTX_RXN<1>                         | IPAD             | INPUT     |                      |          |      |              |          |          |
+| GTX_RXP<0>                         | IPAD             | INPUT     |                      |          |      |              |          |          |
+| GTX_RXP<1>                         | IPAD             | INPUT     |                      |          |      |              |          |          |
+| GTX_TXN<0>                         | OPAD             | OUTPUT    |                      |          |      |              |          |          |
+| GTX_TXN<1>                         | OPAD             | OUTPUT    |                      |          |      |              |          |          |
+| GTX_TXP<0>                         | OPAD             | OUTPUT    |                      |          |      |              |          |          |
+| GTX_TXP<1>                         | OPAD             | OUTPUT    |                      |          |      |              |          |          |
+| LEDS<0>                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
+| LEDS<1>                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
+| LEDS<2>                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
+| LEDS<3>                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
+| LEDS<4>                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
+| LEDS<5>                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
+| LEDS<6>                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
+| LEDS<7>                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
+| RESET                              | IOB              | INPUT     | LVCMOS25             |          |      |              |          |          |
+| SW<0>                              | IOB              | INPUT     | LVCMOS25             |          |      |              |          |          |
+| SW<1>                              | IOB              | INPUT     | LVCMOS25             |          |      |              |          |          |
+| SW<2>                              | IOB              | INPUT     | LVCMOS25             |          |      |              |          |          |
+| TX_INHIBIT                         | IOB              | INPUT     | LVCMOS25             |          |      |              |          |          |
+| UART_RX                            | IOB              | INPUT     | LVCMOS25             |          |      |              |          |          |
+| UART_TX                            | IOB              | OUTPUT    | LVCMOS25             | 12       | SLOW |              |          |          |
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Development System Reference Guide "TRACE" chapter.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                        | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48E  | BUFG  | BUFIO | BUFR  | DCM   | PLL   | Full Hierarchical Name                                                                                                           |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| RocketIO_Demo/                |           | 35/159        | 0/246         | 47/215        | 0/0           | 0/1       | 0/0     | 0/3   | 0/0   | 0/0   | 0/0   | 0/1   | RocketIO_Demo                                                                                                                    |
+| +gtx_i                        |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 1/3   | 0/0   | 0/0   | 0/0   | 0/1   | RocketIO_Demo/gtx_i                                                                                                              |
+| ++refclkout_pll0_i            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 2/2   | 0/0   | 0/0   | 0/0   | 1/1   | RocketIO_Demo/gtx_i/refclkout_pll0_i                                                                                             |
+| ++rocketio_gtx_i              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/gtx_i/rocketio_gtx_i                                                                                               |
+| +++tile0_rocketio_gtx_i       |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/gtx_i/rocketio_gtx_i/tile0_rocketio_gtx_i                                                                          |
+| +gtx_rx_fsm_i                 |           | 3/3           | 1/1           | 3/3           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/gtx_rx_fsm_i                                                                                                       |
+| +recv_i                       |           | 12/14         | 25/31         | 20/26         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/recv_i                                                                                                             |
+| ++baud_gen                    |           | 2/2           | 6/6           | 6/6           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/recv_i/baud_gen                                                                                                    |
+| +uart_rx_fsm_i                |           | 14/17         | 22/33         | 29/30         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/uart_rx_fsm_i                                                                                                      |
+| ++lfsr_inst                   |           | 3/3           | 11/11         | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/uart_rx_fsm_i/lfsr_inst                                                                                            |
+| +xmit_fifo_i                  |           | 0/69          | 0/156         | 0/69          | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i                                                                                                        |
+| ++BU2                         |           | 0/69          | 0/156         | 0/69          | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2                                                                                                    |
+| +++U0                         |           | 0/69          | 0/156         | 0/69          | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0                                                                                                 |
+| ++++grf.rf                    |           | 0/69          | 0/156         | 0/69          | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf                                                                                          |
+| +++++gcx.clkx                 |           | 25/25         | 80/80         | 38/38         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gcx.clkx                                                                                 |
+| +++++gl0.rd                   |           | 0/17          | 0/25          | 0/16          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.rd                                                                                   |
+| ++++++gr1.rfwft               |           | 6/6           | 4/4           | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gr1.rfwft                                                                         |
+| ++++++gras.rsts               |           | 1/5           | 1/1           | 1/11          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts                                                                         |
+| +++++++c0                     |           | 2/2           | 0/0           | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/c0                                                                      |
+| +++++++c1                     |           | 2/2           | 0/0           | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/gras.rsts/c1                                                                      |
+| ++++++rpntr                   |           | 6/6           | 20/20         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.rd/rpntr                                                                             |
+| +++++gl0.wr                   |           | 1/16          | 0/32          | 1/12          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.wr                                                                                   |
+| ++++++gwas.wsts               |           | 1/5           | 2/2           | 1/11          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts                                                                         |
+| +++++++c1                     |           | 2/2           | 0/0           | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/c1                                                                      |
+| +++++++c2                     |           | 2/2           | 0/0           | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/gwas.wsts/c2                                                                      |
+| ++++++wpntr                   |           | 10/10         | 30/30         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/gl0.wr/wpntr                                                                             |
+| +++++mem                      |           | 3/3           | 8/8           | 1/1           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/mem                                                                                      |
+| ++++++gbm.gbmg.gbmga.ngecc.bm |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg                                                             |
+| +++++++blk_mem_generator      |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator                                           |
+| ++++++++valid.cstr            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr                                |
+| +++++++++ramloop[0].ram.r     |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r               |
+| ++++++++++v5_noinit.ram       |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram |
+| +++++rstblk                   |           | 8/8           | 11/11         | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_fifo_i/BU2/U0/grf.rf/rstblk                                                                                   |
+| +xmit_i                       |           | 10/19         | 16/25         | 21/38         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_i                                                                                                             |
+| ++bpulse_gen                  |           | 9/9           | 9/9           | 17/17         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0   | RocketIO_Demo/xmit_i/bpulse_gen                                                                                                  |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

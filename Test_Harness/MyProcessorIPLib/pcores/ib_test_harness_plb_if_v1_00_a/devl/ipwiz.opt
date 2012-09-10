@@ -1,0 +1,9 @@
+-batch 
+-create ib_test_harness_plb_if 
+-ver 1.00.a 
+-dir "/tmp/infinibandfpga/Test_Harness/MyProcessorIPLib" 
+-lang vhdl 
+-bus plbv46 s 
+-mem 1 
+-xps 
+-driver 

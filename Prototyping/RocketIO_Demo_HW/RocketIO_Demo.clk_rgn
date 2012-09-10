@@ -1,0 +1,218 @@
+Release 10.1.03 - reportgen K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Fri Mar 27 16:47:55 2009
+
+SUMMARY
+-------
+There are 16 clock regions:
+
+Clock Reports by Clock Regions
+------------------------------
+
+Clock Region X0Y0:
+------------------
+Number of global clocks in this region: 1
+List of global clocks in this region:
+   gtx_usr_clk driven by BUFGCTRL_X0Y14 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of       SLICEL:    14 used out of   600     2%
+Number of       SLICEM:     3 used out of   200     1%
+
+Clock Region X1Y0:
+------------------
+Number of global clocks in this region: 2
+List of global clocks in this region:
+   gtx_usr_clk driven by BUFGCTRL_X0Y14 
+   gtx_i/tile0_txusrclk0_i driven by BUFGCTRL_X0Y1 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of     GTX_DUAL:     1 used out of     1   100%
+Number of         IPAD:     4 used out of     6    66%
+Number of         OPAD:     4 used out of     4   100%
+Number of   RAMBFIFO36:     1 used out of     8    12%
+Number of       SLICEL:    37 used out of   480     7%
+Number of       SLICEM:    17 used out of   240     7%
+
+Clock Region X0Y1:
+------------------
+Number of global clocks in this region: 1
+List of global clocks in this region:
+   gtx_i/tile0_refclkout_to_cmt_i driven by BUFGCTRL_X0Y2 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         IOBM:     3 used out of    20    15%
+Number of         IOBS:     3 used out of    20    15%
+Number of      PLL_ADV:     1 used out of     2    50%
+
+Clock Region X1Y1:
+------------------
+Number of global clocks in this region: 1
+List of global clocks in this region:
+   gtx_usr_clk driven by BUFGCTRL_X0Y14 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of       SLICEL:    23 used out of   480     4%
+Number of       SLICEM:     9 used out of   240     3%
+
+Clock Region X0Y2:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         IOBS:     2 used out of    30     6%
+
+Clock Region X1Y2:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         IOBS:     1 used out of    20     5%
+Number of       SLICEL:     2 used out of   480     1%
+
+Clock Region X0Y3:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of     BUFGCTRL:     3 used out of    16    18%
+
+Clock Region X1Y3:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y4:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y4:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y5:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         IOBM:     2 used out of    30     6%
+Number of         IOBS:     3 used out of    30    10%
+
+Clock Region X1Y5:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of        BUFDS:     1 used out of     1   100%
+Number of         IPAD:     2 used out of     6    33%
+
+Clock Region X0Y6:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y6:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y7:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y7:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+

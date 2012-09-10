@@ -1,0 +1,12 @@
+# Output products list for <uart_fifo_xilinx>
+uart_fifo_xilinx.asy
+uart_fifo_xilinx.ngc
+uart_fifo_xilinx.sym
+uart_fifo_xilinx.v
+uart_fifo_xilinx.veo
+uart_fifo_xilinx.vhd
+uart_fifo_xilinx.vho
+uart_fifo_xilinx.xco
+uart_fifo_xilinx_fifo_generator_v4_4_xst_1.ngc_xst.xrpt
+uart_fifo_xilinx_flist.txt
+uart_fifo_xilinx_xmdf.tcl

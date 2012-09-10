@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          /tmp/infinibandfpga/Test_Harness/MyProcessorIPLib/drivers/ib_test_harness_plb_if_v1_00_a/data/ib_test_harness_plb_if_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Tue Apr  7 16:18:08 2009 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER ib_test_harness_plb_if
+
+  OPTION supported_peripherals = (ib_test_harness_plb_if);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

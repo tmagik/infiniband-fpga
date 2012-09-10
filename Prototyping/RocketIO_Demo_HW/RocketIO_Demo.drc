@@ -1,0 +1,6 @@
+WARNING:PhysDesignRules:1724 - One or more GTPs are being used in this design.
+   Evaluate the SelectIO-To-GTP Crosstalk section of the Virtex-5 RocketIO GTP
+   Transceiver User Guide to ensure that the design SelectIO usage meets the
+   guidelines to minimize the impact on GTP performance. 
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

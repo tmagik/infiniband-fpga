@@ -1,0 +1,51 @@
+Release 10.1.03 Physical Synthesis Report K.39 (lin)
+Copyright (c) 1995-2007 Xilinx, Inc. All rights reserved.
+
+TABLE OF CONTENTS
+  1) Physical Synthesis Options Summary
+  2) Optimizations statistics and details
+
+
+=========================================================================
+*                 Physical Synthesis Options Summary                    *
+=========================================================================
+---- Options
+Global Optimization                 : ON
+    Retiming                        : ON
+    Equivalent Register Removal     : ON
+Timing-Driven Packing and Placement : ON
+    Logic Optimization              : ON
+    Register Duplication            : ON
+
+---- Target Parameters
+Target Device                       : 5vfx70tff1136-1
+
+=========================================================================
+
+
+=========================================================================
+*                        Optimizations                                  *
+=========================================================================
+---- Statistics
+   Number of registers added by Forward Retiming             | 1               
+   Number of registers removed by Forward Retiming           | 6               
+
+   Overall change in number of registers                     |  -5              
+
+
+---- Details
+
+New or modified components                             | Optimization             | Objective           
+-------------------------------------------------------|--------------------------|----------------------
+recv_i/done_pulse_rstpot_FRB                           | Forward Retiming         | Performance
+
+
+Removed components                                     | Optimization             
+-------------------------------------------------------|--------------------------
+recv_i/done_pulse_BRB0                                 | Forward Retiming         
+recv_i/done_pulse_BRB1                                 | Forward Retiming         
+recv_i/done_pulse_BRB2                                 | Forward Retiming         
+recv_i/done_pulse_BRB4                                 | Forward Retiming         
+recv_i/done_pulse_BRB5                                 | Forward Retiming         
+recv_i/rx_register_7_BRB2                              | Forward Retiming         
+

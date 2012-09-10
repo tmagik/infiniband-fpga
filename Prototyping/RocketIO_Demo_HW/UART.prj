@@ -1,0 +1,7 @@
+vhdl work "ip_compatibility.vhd"
+vhdl work "uart_components.vhd"
+vhdl work "baud_pulse_generator.vhd"
+vhdl work "xmitter.vhd"
+vhdl work "uart_fifo.vhd"
+vhdl work "receiver.vhd"
+vhdl work "UART.vhd"

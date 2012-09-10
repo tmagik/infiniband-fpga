@@ -1,0 +1,228 @@
+Release 10.1.03 - xst K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter xsthdpdir set to /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xst/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+WARNING:Xst:1363 - Option "-crit" is not available for command run.
+WARNING:Xst:1363 - Option "-opt_level_power" is not available for command run.
+WARNING:Xst:1363 - Option "-mapstyle" is not available for command run.
+WARNING:Xst:1363 - Option "-t" is not available for command run.
+WARNING:Xst:1363 - Option "-addsub_extract" is not available for command run.
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RocketIO_Demo.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RocketIO_Demo"
+Output Format                      : NGC
+Target Device                      : xc5vfx70t-1-ff1136
+
+---- Source Options
+Top Module Name                    : RocketIO_Demo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : auto
+Automatic Register Balancing       : No
+FSM Encoding Algorithm             : Auto
+
+---- Target Options
+LUT Combining                      : off
+Reduce Control Sets                : off
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+Mapping Style                      : lut
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Library Search Order               : RocketIO_Demo.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+Optimization Goal                  : Speed
+
+---- Other Options
+opt_level_power                    : 1
+t                                  : XILINX
+addsub_extract                     : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd" in Library work.
+Architecture rtl of Entity rocketio_gtx_tile is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Physical/Physlayer.vhd" in Library work.
+Architecture physlayer of Entity physlayer is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/ip_compatibility.vhd" in Library work.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/mgt_usrclk_source_pll.vhd" in Library work.
+Architecture rtl of Entity mgt_usrclk_source_pll is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd" in Library work.
+Architecture rtl of Entity rocketio_gtx is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Physical/Idle_LFSR.vhd" in Library work.
+Architecture behavioral of Entity idle_lfsr is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/uart_components.vhd" in Library work.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/baud_pulse_generator.vhd" in Library work.
+Architecture behavioral of Entity baud_pulse_generator is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmit_fifo.vhd" in Library work.
+Architecture xmit_fifo_a of Entity xmit_fifo is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/receiver.vhd" in Library work.
+Architecture behavioral of Entity receiver is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmitter.vhd" in Library work.
+Architecture behavioral of Entity xmitter is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_rx_fsm.vhd" in Library work.
+Architecture behavioral of Entity demo_rx_fsm is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_tx_fsm.vhd" in Library work.
+Architecture behavioral of Entity demo_tx_fsm is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd" in Library work.
+Architecture rtl of Entity rocketio_wrapper is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd" in Library work.
+WARNING:HDLParsers:817 - "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd" Line 119. Choice aggregate is not a locally static expression.
+WARNING:HDLParsers:817 - "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd" Line 121. Choice aggregate is not a locally static expression.
+WARNING:HDLParsers:817 - "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd" Line 123. Choice aggregate is not a locally static expression.
+WARNING:HDLParsers:817 - "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd" Line 125. Choice aggregate is not a locally static expression.
+Architecture behavioral of Entity rocketio_demo is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <RocketIO_Demo> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <receiver> in library <work> (architecture <behavioral>) with generics.
+	baud = 115200
+	clk_freq = 78125000
+
+Analyzing hierarchy for entity <xmitter> in library <work> (architecture <behavioral>) with generics.
+	baud = 115200
+	clk_freq = 39062500
+
+Analyzing hierarchy for entity <demo_rx_fsm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <demo_tx_fsm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RocketIO_Wrapper> in library <work> (architecture <rtl>) with generics.
+	EXAMPLE_CONFIG_INDEPENDENT_LANES = 1
+	EXAMPLE_LANE_WITH_START_CHAR = 0
+	EXAMPLE_SIM_GTXRESET_SPEEDUP = 1
+	EXAMPLE_SIM_MODE = "FAST"
+	EXAMPLE_SIM_PLL_PERDIV2 = "000101000000"
+	EXAMPLE_WORDS_IN_BRAM = 512
+	GTX_SELECT = 1
+
+Analyzing hierarchy for entity <baud_pulse_generator> in library <work> (architecture <behavioral>) with generics.
+	baud = 1843200
+	clk_freq = 78125000
+
+Analyzing hierarchy for entity <baud_pulse_generator> in library <work> (architecture <behavioral>) with generics.
+	baud = 115200
+	clk_freq = 39062500
+
+Analyzing hierarchy for entity <Idle_LFSR> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MGT_USRCLK_SOURCE_PLL> in library <work> (architecture <rtl>) with generics.
+	CLK_PERIOD = 16.000000
+	DIVIDE = 4
+	LOCK_WAIT_COUNT = "0011110100001001"
+	MULT = 45
+	OUT0_DIVIDE = 18
+	OUT1_DIVIDE = 9
+	OUT2_DIVIDE = 1
+	OUT3_DIVIDE = 1
+	SIMULATION_P = 0
+
+Analyzing hierarchy for entity <ROCKETIO_GTX> in library <work> (architecture <rtl>) with generics.
+	WRAPPER_SIM_GTXRESET_SPEEDUP = 1
+	WRAPPER_SIM_MODE = "FAST"
+	WRAPPER_SIM_PLL_PERDIV2 = "000101000000"
+
+Analyzing hierarchy for entity <ROCKETIO_GTX_TILE> in library <work> (architecture <rtl>) with generics.
+	TILE_CHAN_BOND_LEVEL_0 = 0
+	TILE_CHAN_BOND_LEVEL_1 = 0
+	TILE_CHAN_BOND_MODE_0 = "OFF"
+	TILE_CHAN_BOND_MODE_1 = "OFF"
+	TILE_SIM_GTXRESET_SPEEDUP = 1
+	TILE_SIM_MODE = "FAST"
+	TILE_SIM_PLL_PERDIV2 = "000101000000"
+
+--> 
+
+
+Total memory usage is 153372 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,389 @@
+iMPACT Version: 10.1.03
+
+iMPACT log file Started on Fri Mar 27 19:07:34 2009
+
+// *** BATCH CMD : loadProjectFile -file"/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_HW.ipf"
+Reusing 78008001 key.
+Reusing FC008001 key.
+ OS platform = i686.
+Connecting to cable (Parallel Port - parport0).
+ WinDriver v9.00 Jungo (c) 1997 - 2007 Build Date: Mar 27 2007 X86 32bit22:31:22.
+ parport0: baseAddress=0x378, ecpAddress=0x778
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+ ECP hardware is detected.
+Cable connection established.
+Connecting to cable (Parallel Port - parport0) in ECP mode.
+ LPT base address = 0378h.
+ Cable Type = 1, Revision = 3.
+ Setting cable speed to 5 MHz.
+Cable connection established.
+INFO:iMPACT:1777 - 
+   Reading /remote/Xilinx/ISE/xcfp/data/xcf32p.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf32p successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+INFO:iMPACT:1835 - Loading CFI file -- File ? --.cfi
+CFI file not found, proceed with device default setting.
+INFO:iMPACT:501 - '2': Added Device xcf32p successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+INFO:iMPACT:1835 - Loading CFI file -- File ? --.cfi
+CFI file not found, proceed with device default setting.
+INFO:iMPACT:1777 - 
+   Reading /remote/Xilinx/ISE/xc9500xl/data/xc95144xl.bsd...
+INFO:iMPACT:501 - '3': Added Device xc95144xl successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+INFO:iMPACT:1777 - 
+   Reading /remote/Xilinx/ISE/acecf/data/xccace.bsd...
+INFO:iMPACT:501 - '4': Added Device xccace successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'5': Loading file'/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.bit' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading /remote/Xilinx/ISE/virtex5/data/xc5vfx70t.bsd...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+INFO:iMPACT:501 - '5': Added Device xc5vfx70t successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Active mode is BS
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : Program -p 5 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+5: Device Temperature: Current Reading:   29.70 C, Min. Reading:   29.21 C, Max.Reading:   32.16 C
+5: VCCINT Supply: Current Reading:   1.002 V, Min. Reading:   0.999 V, Max.Reading:   1.002 V
+5: VCCAUX Supply: Current Reading:   2.476 V, Min. Reading:   2.476 V, Max.Reading:   2.479 V
+'5': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'5': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+End of startup signal from Startup block          :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+Value of MODE pin M2                              :         0
+Internal signal indicates when housecleaning is completed:         1
+Value driver in from INIT pad                     :         1
+Internal signal indicates that chip is configured :         1
+Value of DONE pin                                 :         1
+Indicates when ID value written does not match chip ID:         0
+Decryptor error Signal                            :         0
+System Monitor Over-Temperature Alarm             :         0
+startup_state[18] CFG startup state machine       :         0
+startup_state[19] CFG startup state machine       :         0
+startup_state[20] CFG startup state machine       :         1
+E-fuse program voltage available                  :         0
+SPI Flash Type[22] Select                         :         1
+SPI Flash Type[23] Select                         :         1
+SPI Flash Type[24] Select                         :         1
+CFG bus width auto detection result               :         0
+CFG bus width auto detection result               :         0
+Reserved                                          :         0
+BPI address wrap around error                     :         0
+IPROG pulsed                                      :         0
+read back crc error                               :         0
+Indicates that efuse logic is busy                :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 0001 1110 0000 1011 1000 0000 
+INFO:iMPACT:579 - '5': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '5': Checking done pin....done.
+'5': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Recustomizing IP...
+10.1.03 - Xilinx CORE Generator IP GUI Launcher K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+Finished Recustomizing.
+Regenerating IP...
+WARNING:sim:89 - A core named <rocketio_gtx> already exists in the output   directory. Output products for this core may be overwritten.
+WARNING:sim:215 - This core does not support ASY symbol generation.
+WARNING:sim:93 - NGC output will not be generated for this core.
+Finished Regenerating.
+Successfully generated rocketio_gtx.
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment/remote/Xilinx/ISE.
+No DRC error found.
+Updating config file/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.bit...
+// *** BATCH CMD : Program -p 5 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+5: Device Temperature: Current Reading:   29.70 C, Min. Reading:   29.21 C, Max.Reading:   30.69 C
+5: VCCINT Supply: Current Reading:   1.002 V, Min. Reading:   0.999 V, Max.Reading:   1.002 V
+5: VCCAUX Supply: Current Reading:   2.476 V, Min. Reading:   2.476 V, Max.Reading:   2.479 V
+'5': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'5': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+End of startup signal from Startup block          :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+Value of MODE pin M2                              :         0
+Internal signal indicates when housecleaning is completed:         1
+Value driver in from INIT pad                     :         1
+Internal signal indicates that chip is configured :         1
+Value of DONE pin                                 :         1
+Indicates when ID value written does not match chip ID:         0
+Decryptor error Signal                            :         0
+System Monitor Over-Temperature Alarm             :         0
+startup_state[18] CFG startup state machine       :         0
+startup_state[19] CFG startup state machine       :         0
+startup_state[20] CFG startup state machine       :         1
+E-fuse program voltage available                  :         0
+SPI Flash Type[22] Select                         :         1
+SPI Flash Type[23] Select                         :         1
+SPI Flash Type[24] Select                         :         1
+CFG bus width auto detection result               :         0
+CFG bus width auto detection result               :         0
+Reserved                                          :         0
+BPI address wrap around error                     :         0
+IPROG pulsed                                      :         0
+read back crc error                               :         0
+Indicates that efuse logic is busy                :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 0001 1110 0000 1011 1000 0000 
+INFO:iMPACT:579 - '5': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '5': Checking done pin....done.
+'5': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+PROGRESS_START - Starting Operation.
+Reusing 78008001 key.
+Reusing FC008001 key.
+ OS platform = i686.
+Connecting to cable (Parallel Port - parport0).
+ WinDriver v9.00 Jungo (c) 1997 - 2007 Build Date: Mar 27 2007 X86 32bit22:31:22.
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+ ECP hardware is detected.
+Cable connection established.
+Connecting to cable (Parallel Port - parport0) in ECP mode.
+ LPT base address = 0378h.
+ Cable Type = 1, Revision = 3.
+ Setting cable speed to 5 MHz.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Updating config file/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.bit...
+// *** BATCH CMD : Program -p 5 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+5: Device Temperature: Current Reading:   30.20 C, Min. Reading:   29.21 C, Max.Reading:   31.67 C
+5: VCCINT Supply: Current Reading:   1.002 V, Min. Reading:   0.999 V, Max.Reading:   1.002 V
+5: VCCAUX Supply: Current Reading:   2.476 V, Min. Reading:   2.473 V, Max.Reading:   2.479 V
+'5': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'5': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+End of startup signal from Startup block          :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+Value of MODE pin M2                              :         0
+Internal signal indicates when housecleaning is completed:         1
+Value driver in from INIT pad                     :         1
+Internal signal indicates that chip is configured :         1
+Value of DONE pin                                 :         1
+Indicates when ID value written does not match chip ID:         0
+Decryptor error Signal                            :         0
+System Monitor Over-Temperature Alarm             :         0
+startup_state[18] CFG startup state machine       :         0
+startup_state[19] CFG startup state machine       :         0
+startup_state[20] CFG startup state machine       :         1
+E-fuse program voltage available                  :         0
+SPI Flash Type[22] Select                         :         1
+SPI Flash Type[23] Select                         :         1
+SPI Flash Type[24] Select                         :         1
+CFG bus width auto detection result               :         0
+CFG bus width auto detection result               :         0
+Reserved                                          :         0
+BPI address wrap around error                     :         0
+IPROG pulsed                                      :         0
+read back crc error                               :         0
+Indicates that efuse logic is busy                :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 0001 1110 0000 1011 1000 0000 
+INFO:iMPACT:579 - '5': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '5': Checking done pin....done.
+'5': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+Updating config file/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.bit...
+// *** BATCH CMD : Program -p 5 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+5: Device Temperature: Current Reading:   29.70 C, Min. Reading:   29.21 C, Max.Reading:   30.69 C
+5: VCCINT Supply: Current Reading:   1.002 V, Min. Reading:   0.999 V, Max.Reading:   1.002 V
+5: VCCAUX Supply: Current Reading:   2.479 V, Min. Reading:   2.476 V, Max.Reading:   2.479 V
+'5': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'5': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+End of startup signal from Startup block          :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+Value of MODE pin M2                              :         0
+Internal signal indicates when housecleaning is completed:         1
+Value driver in from INIT pad                     :         1
+Internal signal indicates that chip is configured :         1
+Value of DONE pin                                 :         1
+Indicates when ID value written does not match chip ID:         0
+Decryptor error Signal                            :         0
+System Monitor Over-Temperature Alarm             :         0
+startup_state[18] CFG startup state machine       :         0
+startup_state[19] CFG startup state machine       :         0
+startup_state[20] CFG startup state machine       :         1
+E-fuse program voltage available                  :         0
+SPI Flash Type[22] Select                         :         1
+SPI Flash Type[23] Select                         :         1
+SPI Flash Type[24] Select                         :         1
+CFG bus width auto detection result               :         0
+CFG bus width auto detection result               :         0
+Reserved                                          :         0
+BPI address wrap around error                     :         0
+IPROG pulsed                                      :         0
+read back crc error                               :         0
+Indicates that efuse logic is busy                :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 0001 1110 0000 1011 1000 0000 
+INFO:iMPACT:579 - '5': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '5': Checking done pin....done.
+'5': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+Updating config file/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.bit...
+// *** BATCH CMD : Program -p 5 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+5: Device Temperature: Current Reading:   29.21 C, Min. Reading:   29.21 C, Max.Reading:   30.69 C
+5: VCCINT Supply: Current Reading:   1.002 V, Min. Reading:   0.999 V, Max.Reading:   1.002 V
+5: VCCAUX Supply: Current Reading:   2.476 V, Min. Reading:   2.476 V, Max.Reading:   2.479 V
+'5': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'5': Reading status register contents...
+CRC error                                         :         0
+Decryptor security set                            :         0
+DCM locked                                        :         1
+DCI matched                                       :         1
+End of startup signal from Startup block          :         1
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+Value of MODE pin M2                              :         0
+Internal signal indicates when housecleaning is completed:         1
+Value driver in from INIT pad                     :         1
+Internal signal indicates that chip is configured :         1
+Value of DONE pin                                 :         1
+Indicates when ID value written does not match chip ID:         0
+Decryptor error Signal                            :         0
+System Monitor Over-Temperature Alarm             :         0
+startup_state[18] CFG startup state machine       :         0
+startup_state[19] CFG startup state machine       :         0
+startup_state[20] CFG startup state machine       :         1
+E-fuse program voltage available                  :         0
+SPI Flash Type[22] Select                         :         1
+SPI Flash Type[23] Select                         :         1
+SPI Flash Type[24] Select                         :         1
+CFG bus width auto detection result               :         0
+CFG bus width auto detection result               :         0
+Reserved                                          :         0
+BPI address wrap around error                     :         0
+IPROG pulsed                                      :         0
+read back crc error                               :         0
+Indicates that efuse logic is busy                :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1111 0001 1110 0000 1011 1000 0000 
+INFO:iMPACT:579 - '5': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '5': Checking done pin....done.
+'5': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+// *** BATCH CMD : saveProjectFile -file"/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_HW.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs

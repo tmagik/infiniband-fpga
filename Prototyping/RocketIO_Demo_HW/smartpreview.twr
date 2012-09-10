@@ -1,0 +1,124 @@
+Number of Timing Constraints that were not applied: 11
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* TS_gtx_i_refclkout_pll0_i_clkout0_i_3 = P | SETUP   |    11.406ns|     4.624ns|       0|           0
+  ERIOD TIMEGRP         "gtx_i_refclkout_pl | HOLD    |    -0.005ns|            |       1|           5
+  l0_i_clkout0_i_3" TS_GTX_REFCLK_N / 0.625 |         |            |            |        |            
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout1_i_3 = P | SETUP   |     1.819ns|    10.981ns|       0|           0
+  ERIOD TIMEGRP         "gtx_i_refclkout_pl | HOLD    |     0.333ns|            |       0|           0
+  l0_i_clkout1_i_3" TS_GTX_REFCLK_N / 1.25  |         |            |            |        |            
+  HIGH 50%                                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_GTX_REFCLK_P = PERIOD TIMEGRP "GTX_REF | N/A     |         N/A|         N/A|     N/A|         N/A
+  CLK_P" 16 ns HIGH 50%                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_GTX_REFCLK_N = PERIOD TIMEGRP "GTX_REF | N/A     |         N/A|         N/A|     N/A|         N/A
+  CLK_N" 16 ns HIGH 50%                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_tile0_refclkout_i = PERIOD TIMEG | N/A     |         N/A|         N/A|     N/A|         N/A
+  RP "gtx_i/tile0_refclkout_i" 16 ns        |         |            |            |        |            
+    HIGH 50%                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout0_i = PER | N/A     |         N/A|         N/A|     N/A|         N/A
+  IOD TIMEGRP         "gtx_i_refclkout_pll0 |         |            |            |        |            
+  _i_clkout0_i" TS_gtx_i_tile0_refclkout_i  |         |            |            |        |            
+  HIGH         50%                          |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout1_i = PER | N/A     |         N/A|         N/A|     N/A|         N/A
+  IOD TIMEGRP         "gtx_i_refclkout_pll0 |         |            |            |        |            
+  _i_clkout1_i" TS_gtx_i_tile0_refclkout_i  |         |            |            |        |            
+  / 2 HIGH         50%                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout0_i_0 = P | N/A     |         N/A|         N/A|     N/A|         N/A
+  ERIOD TIMEGRP         "gtx_i_refclkout_pl |         |            |            |        |            
+  l0_i_clkout0_i_0" TS_gtx_i_tile0_refclkou |         |            |            |        |            
+  t_i HIGH         50%                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout1_i_0 = P | N/A     |         N/A|         N/A|     N/A|         N/A
+  ERIOD TIMEGRP         "gtx_i_refclkout_pl |         |            |            |        |            
+  l0_i_clkout1_i_0" TS_gtx_i_tile0_refclkou |         |            |            |        |            
+  t_i / 2         HIGH 50%                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout0_i_1 = P | N/A     |         N/A|         N/A|     N/A|         N/A
+  ERIOD TIMEGRP         "gtx_i_refclkout_pl |         |            |            |        |            
+  l0_i_clkout0_i_1" TS_gtx_i_tile0_refclkou |         |            |            |        |            
+  t_i / 0.5         HIGH 50%                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout1_i_1 = P | N/A     |         N/A|         N/A|     N/A|         N/A
+  ERIOD TIMEGRP         "gtx_i_refclkout_pl |         |            |            |        |            
+  l0_i_clkout1_i_1" TS_gtx_i_tile0_refclkou |         |            |            |        |            
+  t_i HIGH         50%                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = P | N/A     |         N/A|         N/A|     N/A|         N/A
+  ERIOD TIMEGRP         "gtx_i_refclkout_pl |         |            |            |        |            
+  l0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.625 |         |            |            |        |            
+   HIGH 50%                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = P | N/A     |         N/A|         N/A|     N/A|         N/A
+  ERIOD TIMEGRP         "gtx_i_refclkout_pl |         |            |            |        |            
+  l0_i_clkout1_i_2" TS_GTX_REFCLK_P / 1.25  |         |            |            |        |            
+  HIGH 50%                                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_GTX_REFCLK_P
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_GTX_REFCLK_P                |     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| TS_gtx_i_refclkout_pll0_i_clko|     25.600ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut0_i_2                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     12.800ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut1_i_2                       |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_GTX_REFCLK_N
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_GTX_REFCLK_N                |     16.000ns|          N/A|     13.726ns|            0|            1|            0|         3556|
+| TS_gtx_i_refclkout_pll0_i_clko|     25.600ns|      4.624ns|          N/A|            1|            0|         1093|            0|
+| ut0_i_3                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     12.800ns|     10.981ns|          N/A|            0|            0|         2463|            0|
+| ut1_i_3                       |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_gtx_i_tile0_refclkout_i
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_gtx_i_tile0_refclkout_i     |     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| TS_gtx_i_refclkout_pll0_i_clko|     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut0_i                         |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|      8.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut1_i                         |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut0_i_0                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|      8.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut1_i_0                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     32.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut0_i_1                       |             |             |             |             |             |             |             |
+| TS_gtx_i_refclkout_pll0_i_clko|     16.000ns|          N/A|          N/A|            0|            0|            0|            0|
+| ut1_i_1                       |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

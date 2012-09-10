@@ -1,0 +1,41 @@
+Release 10.1.03 - xst K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to ./xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd" in Library work.
+Entity <rocketio_gtx_tile> compiled.
+Entity <rocketio_gtx_tile> (Architecture <rtl>) compiled.
+Compiling vhdl file "/tmp/infinibandfpga/Physical/Physlayer.vhd" in Library work.
+Architecture physlayer of Entity physlayer is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/mgt_usrclk_source_pll.vhd" in Library work.
+Architecture rtl of Entity mgt_usrclk_source_pll is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd" in Library work.
+Entity <rocketio_gtx> compiled.
+Entity <rocketio_gtx> (Architecture <rtl>) compiled.
+Compiling vhdl file "/tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd" in Library work.
+Entity <rocketio_wrapper> compiled.
+Entity <rocketio_wrapper> (Architecture <rtl>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> 
+
+
+Total memory usage is 121920 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

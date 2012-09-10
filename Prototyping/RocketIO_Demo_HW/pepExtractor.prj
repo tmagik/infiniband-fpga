@@ -1,0 +1,4 @@
+InfiniBand	../../Physical/Physlayer.vhd
+work	RocketIO_Demo.vhd
+work	ip_compatibility.vhd
+work	uart_components.vhd

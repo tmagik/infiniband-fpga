@@ -1,0 +1,175 @@
+Release 10.1.03 ngdbuild K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Command Line: /remote/Xilinx/ISE/bin/lin/unwrapped/ngdbuild -ise
+/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_HW.ise -intstyle
+ise -dd _ngo -nt timestamp -i -p xc5vfx70t-ff1136-1 RocketIO_Demo.ngc
+RocketIO_Demo.ngd
+
+Reading NGO file
+"/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.ngc" ...
+Loading design module
+"/tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmit_fifo.ngc"...
+Reading in constraint information from 'RocketIO_Demo.ucf'...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'GTX_REFCLK_P', used in period specification
+   'TS_GTX_REFCLK_P', was traced into PLL_ADV instance
+   gtx_i/refclkout_pll0_i/pll_adv_i. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.625 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'GTX_REFCLK_P', used in period specification
+   'TS_GTX_REFCLK_P', was traced into PLL_ADV instance
+   gtx_i/refclkout_pll0_i/pll_adv_i. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P / 1.25 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'GTX_REFCLK_N', used in period specification
+   'TS_GTX_REFCLK_N', was traced into PLL_ADV instance
+   gtx_i/refclkout_pll0_i/pll_adv_i. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i_3 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_3" TS_GTX_REFCLK_N / 0.625 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'GTX_REFCLK_N', used in period specification
+   'TS_GTX_REFCLK_N', was traced into PLL_ADV instance
+   gtx_i/refclkout_pll0_i/pll_adv_i. The following new TNM groups and period
+   specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i_3 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_3" TS_GTX_REFCLK_N / 1.25 HIGH 50%>
+
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i = PERIOD
+   "gtx_i/refclkout_pll0_i/clkout0_i" 25.6 ns HIGH 50%;> [RocketIO_Demo.ucf(29)]
+   is overridden by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i
+   = PERIOD "gtx_i_refclkout_pll0_i_clkout0_i" TS_gtx_i_tile0_refclkout_i HIGH
+   50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i = PERIOD
+   "gtx_i/refclkout_pll0_i/clkout1_i" 12.8 ns HIGH 50%;> [RocketIO_Demo.ucf(31)]
+   is overridden by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i
+   = PERIOD "gtx_i_refclkout_pll0_i_clkout1_i" TS_gtx_i_tile0_refclkout_i / 2
+   HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.5 HIGH 50%> is
+   overridden by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i_2
+   = PERIOD "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_gtx_i_tile0_refclkout_i /
+   0.625 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.5 HIGH 50%> is
+   overridden by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i_2
+   = PERIOD "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_gtx_i_tile0_refclkout_i /
+   0.625 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.5 HIGH 50%> is
+   overridden by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i_2
+   = PERIOD "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.625 HIGH
+   50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.5 HIGH 50%> is
+   overridden by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i_2
+   = PERIOD "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.625 HIGH
+   50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P HIGH 50%> is overridden
+   by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_gtx_i_tile0_refclkout_i / 1.25 HIGH
+   50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P HIGH 50%> is overridden
+   by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_gtx_i_tile0_refclkout_i / 1.25 HIGH
+   50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P HIGH 50%> is overridden
+   by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P / 1.25 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P HIGH 50%> is overridden
+   by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P / 1.25 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_3 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_3" TS_GTX_REFCLK_N / 0.5 HIGH 50%> is
+   overridden by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i_3
+   = PERIOD "gtx_i_refclkout_pll0_i_clkout0_i_3" TS_GTX_REFCLK_N / 0.625 HIGH
+   50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_3 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_3" TS_GTX_REFCLK_N / 0.5 HIGH 50%> is
+   overridden by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout0_i_3
+   = PERIOD "gtx_i_refclkout_pll0_i_clkout0_i_3" TS_GTX_REFCLK_N / 0.625 HIGH
+   50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_3 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_3" TS_GTX_REFCLK_N HIGH 50%> is overridden
+   by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i_3 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_3" TS_GTX_REFCLK_N / 1.25 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_3 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_3" TS_GTX_REFCLK_N HIGH 50%> is overridden
+   by the constraint <TIMESPEC TS_gtx_i_refclkout_pll0_i_clkout1_i_3 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_3" TS_GTX_REFCLK_N / 1.25 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_gtx_i_tile0_refclkout_i / 0.625 HIGH
+   50%> is overridden by the constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.625 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_gtx_i_tile0_refclkout_i / 0.625 HIGH
+   50%> is overridden by the constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout0_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout0_i_2" TS_GTX_REFCLK_P / 0.625 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_gtx_i_tile0_refclkout_i / 1.25 HIGH
+   50%> is overridden by the constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P / 1.25 HIGH 50%>.
+WARNING:NgdBuild:1011 - The constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_gtx_i_tile0_refclkout_i / 1.25 HIGH
+   50%> is overridden by the constraint <TIMESPEC
+   TS_gtx_i_refclkout_pll0_i_clkout1_i_2 = PERIOD
+   "gtx_i_refclkout_pll0_i_clkout1_i_2" TS_GTX_REFCLK_P / 1.25 HIGH 50%>.
+Done...
+Checking Partitions ...
+
+Checking expanded design ...
+WARNING:NgdBuild:486 - Attribute "SIM_MODE" is not allowed on symbol
+   "U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[
+   0].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM18.SDP" of type "RAMB18".  This
+   attribute will be ignored.
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  19
+
+Total memory usage is 83516 kilobytes
+
+Writing NGD file "RocketIO_Demo.ngd" ...
+
+Writing NGDBUILD log file "RocketIO_Demo.bld"...

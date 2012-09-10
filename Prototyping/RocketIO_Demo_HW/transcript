@@ -1,0 +1,1825 @@
+# //  ModelSim SE 6.3c Sep 11 2007 Linux 2.6.18-92.1.18.el5
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {RocketIO_Demo_tb.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx_tile
+# -- Compiling architecture rtl of rocketio_gtx_tile
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Compiling package ip_compatibility
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling package physlayer
+# -- Compiling package body physlayer
+# -- Loading package physlayer
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package ip_compatibility
+# -- Compiling package uart_components
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx
+# -- Compiling architecture rtl of rocketio_gtx
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity mgt_usrclk_source_pll
+# -- Compiling architecture rtl of mgt_usrclk_source_pll
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity baud_pulse_generator
+# -- Compiling architecture behavioral of baud_pulse_generator
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity idle_lfsr
+# -- Compiling architecture behavioral of idle_lfsr
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity xmit_fifo
+# -- Compiling architecture xmit_fifo_a of xmit_fifo
+# -- Loading package iputils_std_logic_arith
+# -- Loading package iputils_std_logic_unsigned
+# -- Loading package textio
+# -- Loading package iputils_conv
+# -- Loading package iputils_misc
+# -- Loading entity fifo_generator_v4_4_bhv_as
+# -- Loading entity fifo_generator_v4_4_bhv_ss
+# -- Loading entity fifo_generator_v4_4
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity xmitter
+# -- Compiling architecture behavioral of xmitter
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity receiver
+# -- Compiling architecture behavioral of receiver
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_tx_fsm
+# -- Compiling architecture behavioral of demo_tx_fsm
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_rx_fsm
+# -- Compiling architecture behavioral of demo_rx_fsm
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Loading package physlayer
+# -- Compiling entity rocketio_demo
+# -- Compiling architecture behavioral of rocketio_demo
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity rocketio_demo_tb
+# -- Compiling architecture behavior of rocketio_demo_tb
+# vsim -lib work -t 1ps RocketIO_Demo_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rocketio_demo_tb(behavior)#1
+# Loading work.ip_compatibility
+# Loading work.uart_components
+# Loading work.physlayer(body)
+# Loading work.rocketio_demo(behavioral)#1
+# Loading xilinxcorelib.iputils_std_logic_arith(body)
+# Loading xilinxcorelib.iputils_std_logic_unsigned(body)
+# Loading std.textio(body)
+# Loading xilinxcorelib.iputils_conv(body)
+# Loading xilinxcorelib.iputils_misc(body)
+# Loading work.xmit_fifo(xmit_fifo_a)#1
+# Loading xilinxcorelib.fifo_generator_v4_4(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_as(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_preload0(behavioral)#1
+# Loading work.receiver(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#1
+# Loading work.xmitter(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#2
+# Loading work.demo_rx_fsm(behavioral)
+# Loading work.idle_lfsr(behavioral)
+# Loading work.demo_tx_fsm(behavioral)
+# Loading unisim.vcomponents
+# Loading work.rocketio_wrapper(rtl)#1
+# Loading unisim.ibufds(ibufds_v)#1
+# Loading unisim.bufg(bufg_v)
+# Loading work.mgt_usrclk_source_pll(rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.pll_adv(pll_adv_v)#1
+# Loading work.rocketio_gtx(rtl)#1
+# Loading work.rocketio_gtx_tile(rtl)#1
+# Loading unisim.gtx_dual(gtx_dual_v)#1
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+# .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page2.cs
+# .main_pane.signals.interior.cs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Error:  Attribute Syntax Error : The calculation of VCO frequency=3.125000e+02 Mhz. This exceeds the permitted VCO frequency range of 4.000000e+02 MHz to 1.440000e+03 MHz. The VCO frequency is calculated with formula: VCO frequency =  CLKFBOUT_MULT / (DIVCLK_DIVIDE * CLKIN_PERIOD). Please adjust the attributes to the permitted VCO frequency range.
+#    Time: 1 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i/refclkout_pll0_i/pll_adv_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 387400 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 387400 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 387400 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 387400 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 393800 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 393800 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 393800 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 393800 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 393800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 393800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rocketio_demo_tb(behavior)#1
+# Loading work.ip_compatibility
+# Loading work.uart_components
+# Loading work.physlayer(body)
+# Loading work.rocketio_demo(behavioral)#1
+# Loading xilinxcorelib.iputils_std_logic_arith(body)
+# Loading xilinxcorelib.iputils_std_logic_unsigned(body)
+# Loading std.textio(body)
+# Loading xilinxcorelib.iputils_conv(body)
+# Loading xilinxcorelib.iputils_misc(body)
+# Loading work.xmit_fifo(xmit_fifo_a)#1
+# Loading xilinxcorelib.fifo_generator_v4_4(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_as(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_preload0(behavioral)#1
+# Loading work.receiver(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#1
+# Loading work.xmitter(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#2
+# Loading work.demo_rx_fsm(behavioral)
+# Loading work.idle_lfsr(behavioral)
+# Loading work.demo_tx_fsm(behavioral)
+# Loading unisim.vcomponents
+# Loading work.rocketio_wrapper(rtl)#1
+# Loading unisim.ibufds(ibufds_v)#1
+# Loading unisim.bufg(bufg_v)
+# Loading work.mgt_usrclk_source_pll(rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.pll_adv(pll_adv_v)#1
+# Loading work.rocketio_gtx(rtl)#1
+# Loading work.rocketio_gtx_tile(rtl)#1
+# Loading unisim.gtx_dual(gtx_dual_v)#1
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Error:  Attribute Syntax Error : The calculation of VCO frequency=3.125000e+02 Mhz. This exceeds the permitted VCO frequency range of 4.000000e+02 MHz to 1.440000e+03 MHz. The VCO frequency is calculated with formula: VCO frequency =  CLKFBOUT_MULT / (DIVCLK_DIVIDE * CLKIN_PERIOD). Please adjust the attributes to the permitted VCO frequency range.
+#    Time: 1 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i/refclkout_pll0_i/pll_adv_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 387400 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 387400 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 387400 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 387400 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 393800 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 393800 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 393800 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 393800 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 393800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 393800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+vcom -explicit -93 /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rocketio_demo_tb(behavior)#1
+# Loading work.ip_compatibility
+# Loading work.uart_components
+# Loading work.physlayer(body)
+# Loading work.rocketio_demo(behavioral)#1
+# Loading xilinxcorelib.iputils_std_logic_arith(body)
+# Loading xilinxcorelib.iputils_std_logic_unsigned(body)
+# Loading std.textio(body)
+# Loading xilinxcorelib.iputils_conv(body)
+# Loading xilinxcorelib.iputils_misc(body)
+# Loading work.xmit_fifo(xmit_fifo_a)#1
+# Loading xilinxcorelib.fifo_generator_v4_4(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_as(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_preload0(behavioral)#1
+# Loading work.receiver(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#1
+# Loading work.xmitter(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#2
+# Loading work.demo_rx_fsm(behavioral)
+# Loading work.idle_lfsr(behavioral)
+# Loading work.demo_tx_fsm(behavioral)
+# Loading unisim.vcomponents
+# Loading work.rocketio_wrapper(rtl)#1
+# Loading unisim.ibufds(ibufds_v)#1
+# Loading unisim.bufg(bufg_v)
+# Loading work.mgt_usrclk_source_pll(rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.pll_adv(pll_adv_v)#1
+# Loading work.rocketio_gtx(rtl)#1
+# Loading work.rocketio_gtx_tile(rtl)#1
+# Loading unisim.gtx_dual(gtx_dual_v)#1
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+restart
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Error:  Attribute Syntax Error : The calculation of VCO frequency=3.125000e+02 Mhz. This exceeds the permitted VCO frequency range of 4.000000e+02 MHz to 1.440000e+03 MHz. The VCO frequency is calculated with formula: VCO frequency =  CLKFBOUT_MULT / (DIVCLK_DIVIDE * CLKIN_PERIOD). Please adjust the attributes to the permitted VCO frequency range.
+#    Time: 1 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i/refclkout_pll0_i/pll_adv_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 489800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 489800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+run
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Loading package physlayer
+# -- Compiling entity rocketio_demo
+# -- Compiling architecture behavioral of rocketio_demo
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rocketio_demo_tb(behavior)#1
+# Loading work.ip_compatibility
+# Loading work.uart_components
+# Loading work.physlayer(body)
+# Loading work.rocketio_demo(behavioral)#1
+# Loading xilinxcorelib.iputils_std_logic_arith(body)
+# Loading xilinxcorelib.iputils_std_logic_unsigned(body)
+# Loading std.textio(body)
+# Loading xilinxcorelib.iputils_conv(body)
+# Loading xilinxcorelib.iputils_misc(body)
+# Loading work.xmit_fifo(xmit_fifo_a)#1
+# Loading xilinxcorelib.fifo_generator_v4_4(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_as(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_preload0(behavioral)#1
+# Loading work.receiver(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#1
+# Loading work.xmitter(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#2
+# Loading work.demo_rx_fsm(behavioral)
+# Loading work.idle_lfsr(behavioral)
+# Loading work.demo_tx_fsm(behavioral)
+# Loading unisim.vcomponents
+# Loading work.rocketio_wrapper(rtl)#1
+# Loading unisim.ibufds(ibufds_v)#1
+# Loading unisim.bufg(bufg_v)
+# Loading work.mgt_usrclk_source_pll(rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.pll_adv(pll_adv_v)#1
+# Loading work.rocketio_gtx(rtl)#1
+# Loading work.rocketio_gtx_tile(rtl)#1
+# Loading unisim.gtx_dual(gtx_dual_v)#1
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Error:  Attribute Syntax Error : The calculation of VCO frequency=3.125000e+02 Mhz. This exceeds the permitted VCO frequency range of 4.000000e+02 MHz to 1.440000e+03 MHz. The VCO frequency is calculated with formula: VCO frequency =  CLKFBOUT_MULT / (DIVCLK_DIVIDE * CLKIN_PERIOD). Please adjust the attributes to the permitted VCO frequency range.
+#    Time: 1 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i/refclkout_pll0_i/pll_adv_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 489800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 489800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rocketio_demo_tb(behavior)#1
+# Loading work.ip_compatibility
+# Loading work.uart_components
+# Loading work.physlayer(body)
+# Loading work.rocketio_demo(behavioral)#1
+# Loading xilinxcorelib.iputils_std_logic_arith(body)
+# Loading xilinxcorelib.iputils_std_logic_unsigned(body)
+# Loading std.textio(body)
+# Loading xilinxcorelib.iputils_conv(body)
+# Loading xilinxcorelib.iputils_misc(body)
+# Loading work.xmit_fifo(xmit_fifo_a)#1
+# Loading xilinxcorelib.fifo_generator_v4_4(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_as(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_preload0(behavioral)#1
+# Loading work.receiver(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#1
+# Loading work.xmitter(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#2
+# Loading work.demo_rx_fsm(behavioral)
+# Loading work.idle_lfsr(behavioral)
+# Loading work.demo_tx_fsm(behavioral)
+# Loading unisim.vcomponents
+# Loading work.rocketio_wrapper(rtl)#1
+# Loading unisim.ibufds(ibufds_v)#1
+# Loading unisim.bufg(bufg_v)
+# Loading work.mgt_usrclk_source_pll(rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.pll_adv(pll_adv_v)#1
+# Loading work.rocketio_gtx(rtl)#1
+# Loading work.rocketio_gtx_tile(rtl)#1
+# Loading unisim.gtx_dual(gtx_dual_v)#1
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Error:  Attribute Syntax Error : The calculation of VCO frequency=3.125000e+02 Mhz. This exceeds the permitted VCO frequency range of 4.000000e+02 MHz to 1.440000e+03 MHz. The VCO frequency is calculated with formula: VCO frequency =  CLKFBOUT_MULT / (DIVCLK_DIVIDE * CLKIN_PERIOD). Please adjust the attributes to the permitted VCO frequency range.
+#    Time: 1 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i/refclkout_pll0_i/pll_adv_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 374600 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 400200 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 489800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 489800 ps  Iteration: 1  Instance: /rocketio_demo_tb/uut/gtx_i
+run
+# Add Signal sim:/rocketio_demo_tb/uut/gtx_i/rocketio_gtx_i/tile0_rxlossofsync1_out 
+when -label sim:/rocketio_demo_tb/uut/gtx_i/rocketio_gtx_i/tile0_rxlossofsync1_out sim:/rocketio_demo_tb/uut/gtx_i/rocketio_gtx_i/tile0_rxlossofsync1_out {echo {Break on sim:/rocketio_demo_tb/uut/gtx_i/rocketio_gtx_i/tile0_rxlossofsync1_out} ; stop}
+run -continue
+run -all
+# Break key hit 
+# Simulation stop requested.
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/baud_pulse_generator.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity baud_pulse_generator
+# -- Compiling architecture behavioral of baud_pulse_generator
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_rx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_rx_fsm
+# -- Compiling architecture behavioral of demo_rx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_tx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_tx_fsm
+# -- Compiling architecture behavioral of demo_tx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Idle_LFSR.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity idle_lfsr
+# -- Compiling architecture behavioral of idle_lfsr
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/ip_compatibility.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Compiling package ip_compatibility
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/mgt_usrclk_source_pll.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity mgt_usrclk_source_pll
+# -- Compiling architecture rtl of mgt_usrclk_source_pll
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Physlayer.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling package physlayer
+# -- Compiling package body physlayer
+# -- Loading package physlayer
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/receiver.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity receiver
+# -- Compiling architecture behavioral of receiver
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Loading package physlayer
+# -- Compiling entity rocketio_demo
+# -- Compiling architecture behavioral of rocketio_demo
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_tb.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity rocketio_demo_tb
+# -- Compiling architecture behavior of rocketio_demo_tb
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx
+# -- Compiling architecture rtl of rocketio_gtx
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx_tile
+# -- Compiling architecture rtl of rocketio_gtx_tile
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd(682): (vcom-1136) Unknown identifier "txdiffctrl0_in".
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd(683): (vcom-1136) Unknown identifier "txdiffctrl1_in".
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd(728): VHDL Compiler exiting
+# /remote/Modelsim/6.3c/modeltech/linux/vcom failed.
+vcom -explicit -93 /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(427): Integer literal 16 is not of type std.standard.real.
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(613): VHDL Compiler exiting
+# /remote/Modelsim/6.3c/modeltech/linux/vcom failed.
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/uart_components.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package ip_compatibility
+# -- Compiling package uart_components
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmit_fifo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity xmit_fifo
+# -- Compiling architecture xmit_fifo_a of xmit_fifo
+# -- Loading package iputils_std_logic_arith
+# -- Loading package iputils_std_logic_unsigned
+# -- Loading package textio
+# -- Loading package iputils_conv
+# -- Loading package iputils_misc
+# -- Loading entity fifo_generator_v4_4_bhv_as
+# -- Loading entity fifo_generator_v4_4_bhv_ss
+# -- Loading entity fifo_generator_v4_4
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmitter.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity xmitter
+# -- Compiling architecture behavioral of xmitter
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/baud_pulse_generator.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity baud_pulse_generator
+# -- Compiling architecture behavioral of baud_pulse_generator
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_rx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_rx_fsm
+# -- Compiling architecture behavioral of demo_rx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_tx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_tx_fsm
+# -- Compiling architecture behavioral of demo_tx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Idle_LFSR.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity idle_lfsr
+# -- Compiling architecture behavioral of idle_lfsr
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/ip_compatibility.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Compiling package ip_compatibility
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/mgt_usrclk_source_pll.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity mgt_usrclk_source_pll
+# -- Compiling architecture rtl of mgt_usrclk_source_pll
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Physlayer.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling package physlayer
+# -- Compiling package body physlayer
+# -- Loading package physlayer
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/receiver.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity receiver
+# -- Compiling architecture behavioral of receiver
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Loading package physlayer
+# -- Compiling entity rocketio_demo
+# -- Compiling architecture behavioral of rocketio_demo
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_tb.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity rocketio_demo_tb
+# -- Compiling architecture behavior of rocketio_demo_tb
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx
+# -- Compiling architecture rtl of rocketio_gtx
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx_tile
+# -- Compiling architecture rtl of rocketio_gtx_tile
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd(682): (vcom-1136) Unknown identifier "txdiffctrl0_in".
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd(683): (vcom-1136) Unknown identifier "txdiffctrl1_in".
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd(728): VHDL Compiler exiting
+# /remote/Modelsim/6.3c/modeltech/linux/vcom failed.
+vcom -explicit -93 /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/uart_components.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package ip_compatibility
+# -- Compiling package uart_components
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmit_fifo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity xmit_fifo
+# -- Compiling architecture xmit_fifo_a of xmit_fifo
+# -- Loading package iputils_std_logic_arith
+# -- Loading package iputils_std_logic_unsigned
+# -- Loading package textio
+# -- Loading package iputils_conv
+# -- Loading package iputils_misc
+# -- Loading entity fifo_generator_v4_4_bhv_as
+# -- Loading entity fifo_generator_v4_4_bhv_ss
+# -- Loading entity fifo_generator_v4_4
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmitter.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity xmitter
+# -- Compiling architecture behavioral of xmitter
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/baud_pulse_generator.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity baud_pulse_generator
+# -- Compiling architecture behavioral of baud_pulse_generator
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_rx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_rx_fsm
+# -- Compiling architecture behavioral of demo_rx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_tx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_tx_fsm
+# -- Compiling architecture behavioral of demo_tx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Idle_LFSR.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity idle_lfsr
+# -- Compiling architecture behavioral of idle_lfsr
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/ip_compatibility.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Compiling package ip_compatibility
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/mgt_usrclk_source_pll.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity mgt_usrclk_source_pll
+# -- Compiling architecture rtl of mgt_usrclk_source_pll
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Physlayer.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling package physlayer
+# -- Compiling package body physlayer
+# -- Loading package physlayer
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/receiver.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity receiver
+# -- Compiling architecture behavioral of receiver
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Loading package physlayer
+# -- Compiling entity rocketio_demo
+# -- Compiling architecture behavioral of rocketio_demo
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_tb.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity rocketio_demo_tb
+# -- Compiling architecture behavior of rocketio_demo_tb
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx
+# -- Compiling architecture rtl of rocketio_gtx
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx_tile
+# -- Compiling architecture rtl of rocketio_gtx_tile
+vcom -explicit -93 /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/uart_components.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package ip_compatibility
+# -- Compiling package uart_components
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmit_fifo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity xmit_fifo
+# -- Compiling architecture xmit_fifo_a of xmit_fifo
+# -- Loading package iputils_std_logic_arith
+# -- Loading package iputils_std_logic_unsigned
+# -- Loading package textio
+# -- Loading package iputils_conv
+# -- Loading package iputils_misc
+# -- Loading entity fifo_generator_v4_4_bhv_as
+# -- Loading entity fifo_generator_v4_4_bhv_ss
+# -- Loading entity fifo_generator_v4_4
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmitter.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity xmitter
+# -- Compiling architecture behavioral of xmitter
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(528): (vopt-1130) Port "tile0_rxreset0_in" of entity "rocketio_gtx" is not in the component being instantiated.
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(528): (vopt-1130) Port "tile0_rxreset1_in" of entity "rocketio_gtx" is not in the component being instantiated.
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd(102): Vopt Compiler exiting
+run
+# Cannot continue because of fatal error.
+restart
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(528): (vopt-1130) Port "tile0_rxreset0_in" of entity "rocketio_gtx" is not in the component being instantiated.
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(528): (vopt-1130) Port "tile0_rxreset1_in" of entity "rocketio_gtx" is not in the component being instantiated.
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd(102): Vopt Compiler exiting
+restart
+# wrong number of args for "dataset info".
+# Usage: dataset info <option> <dataset_name>
+restart
+# wrong number of args for "dataset info".
+# Usage: dataset info <option> <dataset_name>
+restart
+# wrong number of args for "dataset info".
+# Usage: dataset info <option> <dataset_name>
+
+restart
+# wrong number of args for "dataset info".
+# Usage: dataset info <option> <dataset_name>
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/baud_pulse_generator.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity baud_pulse_generator
+# -- Compiling architecture behavioral of baud_pulse_generator
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_rx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_rx_fsm
+# -- Compiling architecture behavioral of demo_rx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_tx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_tx_fsm
+# -- Compiling architecture behavioral of demo_tx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Idle_LFSR.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity idle_lfsr
+# -- Compiling architecture behavioral of idle_lfsr
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/ip_compatibility.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Compiling package ip_compatibility
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/mgt_usrclk_source_pll.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity mgt_usrclk_source_pll
+# -- Compiling architecture rtl of mgt_usrclk_source_pll
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Physlayer.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling package physlayer
+# -- Compiling package body physlayer
+# -- Loading package physlayer
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/receiver.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity receiver
+# -- Compiling architecture behavioral of receiver
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Loading package physlayer
+# -- Compiling entity rocketio_demo
+# -- Compiling architecture behavioral of rocketio_demo
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_tb.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity rocketio_demo_tb
+# -- Compiling architecture behavior of rocketio_demo_tb
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx
+# -- Compiling architecture rtl of rocketio_gtx
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx_tile
+# -- Compiling architecture rtl of rocketio_gtx_tile
+vcom -explicit -93 /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(427): Integer literal 16 is not of type std.standard.real.
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(613): VHDL Compiler exiting
+# /remote/Modelsim/6.3c/modeltech/linux/vcom failed.
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/uart_components.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package ip_compatibility
+# -- Compiling package uart_components
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmit_fifo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity xmit_fifo
+# -- Compiling architecture xmit_fifo_a of xmit_fifo
+# -- Loading package iputils_std_logic_arith
+# -- Loading package iputils_std_logic_unsigned
+# -- Loading package textio
+# -- Loading package iputils_conv
+# -- Loading package iputils_misc
+# -- Loading entity fifo_generator_v4_4_bhv_as
+# -- Loading entity fifo_generator_v4_4_bhv_ss
+# -- Loading entity fifo_generator_v4_4
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmitter.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity xmitter
+# -- Compiling architecture behavioral of xmitter
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/baud_pulse_generator.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity baud_pulse_generator
+# -- Compiling architecture behavioral of baud_pulse_generator
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_rx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_rx_fsm
+# -- Compiling architecture behavioral of demo_rx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/demo_tx_fsm.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity demo_tx_fsm
+# -- Compiling architecture behavioral of demo_tx_fsm
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Idle_LFSR.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Compiling entity idle_lfsr
+# -- Compiling architecture behavioral of idle_lfsr
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/ip_compatibility.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Compiling package ip_compatibility
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/mgt_usrclk_source_pll.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity mgt_usrclk_source_pll
+# -- Compiling architecture rtl of mgt_usrclk_source_pll
+vcom -explicit -93 /tmp/infinibandfpga/Physical/Physlayer.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling package physlayer
+# -- Compiling package body physlayer
+# -- Loading package physlayer
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/receiver.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity receiver
+# -- Compiling architecture behavioral of receiver
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Loading package physlayer
+# -- Compiling entity rocketio_demo
+# -- Compiling architecture behavioral of rocketio_demo
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_tb.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity rocketio_demo_tb
+# -- Compiling architecture behavior of rocketio_demo_tb
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx
+# -- Compiling architecture rtl of rocketio_gtx
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx_tile.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_gtx_tile
+# -- Compiling architecture rtl of rocketio_gtx_tile
+vcom -explicit -93 /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/uart_components.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package ip_compatibility
+# -- Compiling package uart_components
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmit_fifo.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity xmit_fifo
+# -- Compiling architecture xmit_fifo_a of xmit_fifo
+# -- Loading package iputils_std_logic_arith
+# -- Loading package iputils_std_logic_unsigned
+# -- Loading package textio
+# -- Loading package iputils_conv
+# -- Loading package iputils_misc
+# -- Loading entity fifo_generator_v4_4_bhv_as
+# -- Loading entity fifo_generator_v4_4_bhv_ss
+# -- Loading entity fifo_generator_v4_4
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/xmitter.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package ip_compatibility
+# -- Loading package uart_components
+# -- Compiling entity xmitter
+# -- Compiling architecture behavioral of xmitter
+restart
+# wrong number of args for "dataset info".
+# Usage: dataset info <option> <dataset_name>
+run
+# Cannot continue because of fatal error.
+restart
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(528): (vopt-1130) Port "tile0_rxreset0_in" of entity "rocketio_gtx" is not in the component being instantiated.
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(528): (vopt-1130) Port "tile0_rxreset1_in" of entity "rocketio_gtx" is not in the component being instantiated.
+# ** Error: /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/rocketio_gtx/src/rocketio_gtx.vhd(102): Vopt Compiler exiting
+vcom -explicit -93 /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(526): near "TILE0_RXRESET0_IN": expecting ',' or ')'
+# ** Error: /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd(614): VHDL Compiler exiting
+# /remote/Modelsim/6.3c/modeltech/linux/vcom failed.
+vcom -explicit -93 /tmp/infinibandfpga/Physical/RocketIO_Wrapper.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package physlayer
+# -- Loading package vcomponents
+# -- Compiling entity rocketio_wrapper
+# -- Compiling architecture rtl of rocketio_wrapper
+restart
+# wrong number of args for "dataset info".
+# Usage: dataset info <option> <dataset_name>
+run
+# Cannot continue because of fatal error.
+restart
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rocketio_demo_tb(behavior)#1
+# Loading work.ip_compatibility
+# Loading work.uart_components
+# Loading work.physlayer(body)
+# Loading work.rocketio_demo(behavioral)#1
+# Loading xilinxcorelib.iputils_std_logic_arith(body)
+# Loading xilinxcorelib.iputils_std_logic_unsigned(body)
+# Loading std.textio(body)
+# Loading xilinxcorelib.iputils_conv(body)
+# Loading xilinxcorelib.iputils_misc(body)
+# Loading work.xmit_fifo(xmit_fifo_a)#1
+# Loading xilinxcorelib.fifo_generator_v4_4(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_as(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_preload0(behavioral)#1
+# Loading work.receiver(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#1
+# Loading work.xmitter(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#2
+# Loading work.demo_rx_fsm(behavioral)
+# Loading work.idle_lfsr(behavioral)
+# Loading work.demo_tx_fsm(behavioral)
+# Loading unisim.vcomponents
+# Loading work.rocketio_wrapper(rtl)#1
+# Loading unisim.ibufds(ibufds_v)#1
+# Loading unisim.bufg(bufg_v)
+# Loading work.mgt_usrclk_source_pll(rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.pll_adv(pll_adv_v)#1
+# Loading work.rocketio_gtx(rtl)#1
+# Loading work.rocketio_gtx_tile(rtl)#1
+# Loading unisim.gtx_dual(gtx_dual_v)#1
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# Break key hit 
+# Simulation stop requested.
+restart
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_tb.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity rocketio_demo_tb
+# -- Compiling architecture behavior of rocketio_demo_tb
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rocketio_demo_tb(behavior)#1
+# Loading work.ip_compatibility
+# Loading work.uart_components
+# Loading work.physlayer(body)
+# Loading work.rocketio_demo(behavioral)#1
+# Loading xilinxcorelib.iputils_std_logic_arith(body)
+# Loading xilinxcorelib.iputils_std_logic_unsigned(body)
+# Loading std.textio(body)
+# Loading xilinxcorelib.iputils_conv(body)
+# Loading xilinxcorelib.iputils_misc(body)
+# Loading work.xmit_fifo(xmit_fifo_a)#1
+# Loading xilinxcorelib.fifo_generator_v4_4(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_as(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_preload0(behavioral)#1
+# Loading work.receiver(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#1
+# Loading work.xmitter(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#2
+# Loading work.demo_rx_fsm(behavioral)
+# Loading work.idle_lfsr(behavioral)
+# Loading work.demo_tx_fsm(behavioral)
+# Loading unisim.vcomponents
+# Loading work.rocketio_wrapper(rtl)#1
+# Loading unisim.ibufds(ibufds_v)#1
+# Loading unisim.bufg(bufg_v)
+# Loading work.mgt_usrclk_source_pll(rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.pll_adv(pll_adv_v)#1
+# Loading work.rocketio_gtx(rtl)#1
+# Loading work.rocketio_gtx_tile(rtl)#1
+# Loading unisim.gtx_dual(gtx_dual_v)#1
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+vcom -explicit -93 /tmp/infinibandfpga/Prototyping/RocketIO_Demo_HW/RocketIO_Demo_tb.vhd
+# Model Technology ModelSim SE vcom 6.3c Compiler 2007.09 Sep 11 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity rocketio_demo_tb
+# -- Compiling architecture behavior of rocketio_demo_tb
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rocketio_demo_tb(behavior)#1
+# Loading work.ip_compatibility
+# Loading work.uart_components
+# Loading work.physlayer(body)
+# Loading work.rocketio_demo(behavioral)#1
+# Loading xilinxcorelib.iputils_std_logic_arith(body)
+# Loading xilinxcorelib.iputils_std_logic_unsigned(body)
+# Loading std.textio(body)
+# Loading xilinxcorelib.iputils_conv(body)
+# Loading xilinxcorelib.iputils_misc(body)
+# Loading work.xmit_fifo(xmit_fifo_a)#1
+# Loading xilinxcorelib.fifo_generator_v4_4(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_as(behavioral)#1
+# Loading xilinxcorelib.fifo_generator_v4_4_bhv_preload0(behavioral)#1
+# Loading work.receiver(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#1
+# Loading work.xmitter(behavioral)#1
+# Loading work.baud_pulse_generator(behavioral)#2
+# Loading work.demo_rx_fsm(behavioral)
+# Loading work.idle_lfsr(behavioral)
+# Loading work.demo_tx_fsm(behavioral)
+# Loading unisim.vcomponents
+# Loading work.rocketio_wrapper(rtl)#1
+# Loading unisim.ibufds(ibufds_v)#1
+# Loading unisim.bufg(bufg_v)
+# Loading work.mgt_usrclk_source_pll(rtl)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.pll_adv(pll_adv_v)#1
+# Loading work.rocketio_gtx(rtl)#1
+# Loading work.rocketio_gtx_tile(rtl)#1
+# Loading unisim.gtx_dual(gtx_dual_v)#1
+# Loading secureip.GTX_DUAL_FAST(fast)
+# Loading secureip.gtx5f_919505(fast)
+# Loading secureip.gtx5f_480532(fast)
+# Loading secureip.gtx5f_790852(fast)
+# Loading secureip.gtx5f_165074(fast)
+# Loading secureip.gtx5f_867289(fast)
+# Loading secureip.gtx5f_848202(fast)
+# Loading secureip.gtx5f_848202(fast__1)
+# Loading secureip.gtx5f_403926(fast)
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Note: Warning in %m at time %t: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+#    Time: 0 ps  Iteration: 0  Instance: /rocketio_demo_tb/uut/xmit_fifo_i/u0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 6  Instance: /rocketio_demo_tb/uut/gtx_i

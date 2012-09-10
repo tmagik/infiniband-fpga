@@ -1,0 +1,35 @@
+Release 10.1.03 - xst K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to ./xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> 
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/tmp/infinibandfpga/Physical/Physlayer.vhd" in Library InfiniBand.
+Architecture physlayer of Entity physlayer is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/Physical/Idle_LFSR.vhd" in Library InfiniBand.
+Architecture behavioral of Entity idle_lfsr is up to date.
+Compiling vhdl file "/tmp/infinibandfpga/RocketIO_Demo_HW/demo_rx_fsm.vhd" in Library work.
+Entity <demo_rx_fsm> compiled.
+Entity <demo_rx_fsm> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.32 secs
+ 
+--> 
+
+
+Total memory usage is 116108 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

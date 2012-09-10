@@ -1,0 +1,5 @@
+vhdl work "rocketio_gtx/src/rocketio_gtx_tile.vhd"
+vhdl work "rocketio_gtx/src/rocketio_gtx.vhd"
+vhdl work "rocketio_gtx/src/mgt_usrclk_source_pll.vhd"
+vhdl work "../../Physical/Physlayer.vhd"
+vhdl work "../../Physical/RocketIO_Wrapper.vhd"

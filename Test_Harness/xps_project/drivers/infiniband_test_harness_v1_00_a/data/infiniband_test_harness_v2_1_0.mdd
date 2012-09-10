@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          /tmp/infinibandfpga/Test_Harness/xps_project/drivers/infiniband_test_harness_v1_00_a/data/infiniband_test_harness_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Tue Apr  7 15:24:14 2009 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER infiniband_test_harness
+
+  OPTION supported_peripherals = (infiniband_test_harness);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER
